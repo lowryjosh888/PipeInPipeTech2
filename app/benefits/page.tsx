@@ -77,38 +77,55 @@ export default function Benefits() {
           </Link>
         </div>
 
+        {/* Benefits strips — ocean photo background */}
+        <div className="relative rounded-xl overflow-hidden max-w-7xl mx-auto mb-8 shadow-xl">
+          {/* Background photo */}
+          <img
+            src="/images/BenefitStrips1.jpg"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          {/* Dark overlay so text stays readable */}
+          <div className="absolute inset-0 bg-[#0a1628]/78" />
+
+          {/* Content */}
+          <div className="relative p-8">
+            <div className="mb-8">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Why Choose The IT3 Multiwall Pipe Rehabilitation Solution?
+              </h2>
+              <p className="text-gray-300">
+                The IT3 Multiwall Piping System offers numerous advantages, addressing challenges with internal corrosion,
+                general pipeline degradation, and overall reduction in pipeline performance and reliability. It is a
+                versatile, cost-effective, and environmentally friendly solution for various industries and applications.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="flex overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                >
+                  {/* Dark navy icon band */}
+                  <div className="w-24 md:w-32 bg-[#0f1e35]/90 flex items-center justify-center flex-shrink-0">
+                    {benefit.icon}
+                  </div>
+                  {/* Content — frosted glass effect lets photo show through subtly */}
+                  <div className="flex-1 bg-black/40 backdrop-blur-sm p-5 border border-white/10 border-l-0 rounded-r-lg">
+                    <h3 className="text-lg font-bold text-white mb-1">{benefit.title}</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Plastic Liners — separate white card */}
         <div className="bg-white rounded-lg shadow-xl p-8 max-w-7xl mx-auto mb-12">
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Why Choose The IT3 Multiwall Pipe Rehabilitation Solution?
-            </h2>
-            <p className="text-gray-600">
-              The IT3 Multiwall Piping System offers numerous advantages, addressing challenges with internal corrosion,
-              general pipeline degradation, and overall reduction in pipeline performance and reliability. It is a
-              versatile, cost-effective, and environmentally friendly solution for various industries and applications.
-            </p>
-          </div>
-
-          <div className="space-y-3">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="flex overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
-              >
-                {/* Dark navy icon band */}
-                <div className="w-24 md:w-32 bg-[#0f1e35] flex items-center justify-center flex-shrink-0">
-                  {benefit.icon}
-                </div>
-                {/* Content */}
-                <div className="flex-1 bg-white p-5 border border-gray-200 border-l-0 rounded-r-lg">
-                  <h3 className="text-lg font-bold text-gray-800 mb-1">{benefit.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{benefit.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 border-t border-gray-200 pt-8">
+          <div>
             <h2 className="text-2xl font-semibold text-gray-800 mb-2">Wide Compatibility with Plastic Liners</h2>
             <div className="w-16 h-1 bg-yellow-400 mb-4 rounded-full" />
             <p className="text-gray-600 mb-6">
