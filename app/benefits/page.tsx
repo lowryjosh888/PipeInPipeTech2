@@ -89,53 +89,56 @@ export default function Benefits() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-3">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow duration-300"
+                className="flex overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
               >
-                <div className="flex items-start">
-                  <div className="mr-4 mt-1">{benefit.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
-                  </div>
+                {/* Dark navy icon band */}
+                <div className="w-24 md:w-32 bg-[#0f1e35] flex items-center justify-center flex-shrink-0">
+                  {benefit.icon}
+                </div>
+                {/* Content */}
+                <div className="flex-1 bg-white p-5 border border-gray-200 border-l-0 rounded-r-lg">
+                  <h3 className="text-lg font-bold text-gray-800 mb-1">{benefit.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{benefit.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <div className="mt-12 border-t border-gray-200 pt-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Wide Compatibility with Plastic Liners</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Wide Compatibility with Plastic Liners</h2>
+            <div className="w-16 h-1 bg-yellow-400 mb-4 rounded-full" />
             <p className="text-gray-600 mb-6">
               The IT3 System supports an extensive range of liner materials, allowing the system to be tailored to
               specific operational and environmental demands:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">Fiberglass</h3>
-                <p className="text-gray-600">Ideal for high-pressure applications and corrosive environments</p>
+              <div className="bg-[#0f1e35] border-l-4 border-l-yellow-400 p-4 rounded-lg">
+                <h3 className="font-semibold text-white mb-2">Fiberglass</h3>
+                <p className="text-gray-400">Ideal for high-pressure applications and corrosive environments</p>
               </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">Polyethylene (PE/HDPE)</h3>
-                <p className="text-gray-600">Excellent chemical resistance and flexibility</p>
+              <div className="bg-[#0f1e35] border-l-4 border-l-yellow-400 p-4 rounded-lg">
+                <h3 className="font-semibold text-white mb-2">Polyethylene (PE/HDPE)</h3>
+                <p className="text-gray-400">Excellent chemical resistance and flexibility</p>
               </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">Polyvinyl Chloride (PVC)</h3>
-                <p className="text-gray-600">Cost-effective with good chemical resistance</p>
+              <div className="bg-[#0f1e35] border-l-4 border-l-yellow-400 p-4 rounded-lg">
+                <h3 className="font-semibold text-white mb-2">Polyvinyl Chloride (PVC)</h3>
+                <p className="text-gray-400">Cost-effective with good chemical resistance</p>
               </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">Polybutylene (PB)</h3>
-                <p className="text-gray-600">Excellent for hot water applications</p>
+              <div className="bg-[#0f1e35] border-l-4 border-l-yellow-400 p-4 rounded-lg">
+                <h3 className="font-semibold text-white mb-2">Polybutylene (PB)</h3>
+                <p className="text-gray-400">Excellent for hot water applications</p>
               </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">High-Temperature Plastics</h3>
-                <p className="text-gray-600">For applications with temperatures up to 350°F</p>
+              <div className="bg-[#0f1e35] border-l-4 border-l-yellow-400 p-4 rounded-lg">
+                <h3 className="font-semibold text-white mb-2">High-Temperature Plastics</h3>
+                <p className="text-gray-400">For applications with temperatures up to 350°F</p>
               </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">Acid-Resistant Plastics</h3>
-                <p className="text-gray-600">For highly corrosive chemical environments</p>
+              <div className="bg-[#0f1e35] border-l-4 border-l-yellow-400 p-4 rounded-lg">
+                <h3 className="font-semibold text-white mb-2">Acid-Resistant Plastics</h3>
+                <p className="text-gray-400">For highly corrosive chemical environments</p>
               </div>
             </div>
           </div>
