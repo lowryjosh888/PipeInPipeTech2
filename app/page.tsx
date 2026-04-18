@@ -130,8 +130,7 @@ function ServicesGrid() {
   const services: Service[] = [
     {
       title: "IT3 System Installation",
-      // ↓ Add your photo: drop the file in public/images/ and update this path
-      photo: null,
+      photo: "/images/IT3 System Installation.png",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
