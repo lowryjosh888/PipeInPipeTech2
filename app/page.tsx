@@ -11,6 +11,7 @@ interface Service {
   icon: React.ReactNode
   description: string
   photo: string | null // path relative to /public — e.g. "/images/it3-install.jpg"
+  photoContain?: boolean // true = show full image (object-contain); false/omit = crop to fill (object-cover)
   expandedContent: React.ReactNode
 }
 
@@ -63,11 +64,11 @@ function ServiceModal({
 
         {/* Photo or placeholder */}
         {service.photo ? (
-          <div className="w-full h-72 overflow-hidden rounded-t-2xl">
+          <div className={`w-full h-72 overflow-hidden rounded-t-2xl ${service.photoContain ? "bg-slate-800 flex items-center justify-center" : ""}`}>
             <img
               src={service.photo}
               alt={service.title}
-              className="w-full h-full object-cover"
+              className={`w-full h-full ${service.photoContain ? "object-contain p-4" : "object-cover"}`}
             />
           </div>
         ) : (
@@ -131,6 +132,7 @@ function ServicesGrid() {
     {
       title: "IT3 System Installation",
       photo: "/images/IT3-System-Installation.png",
+      photoContain: true,
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +156,7 @@ function ServicesGrid() {
           <h4 className="font-semibold mb-3 text-yellow-400 text-sm uppercase tracking-wide">
             Key Features
           </h4>
-          <ul className="space-y-2 mb-5">
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-2 mb-5">
             {[
               "Complete installation of the three-phase piping system",
               "Custom-engineered solutions for each pipeline",
@@ -251,7 +253,7 @@ function ServicesGrid() {
           <h4 className="font-semibold mb-3 text-yellow-400 text-sm uppercase tracking-wide">
             Our Assessment Process
           </h4>
-          <ul className="space-y-2 mb-5">
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-2 mb-5">
             {[
               "Advanced camera inspection technology",
               "Structural integrity testing",
@@ -306,7 +308,7 @@ function ServicesGrid() {
           <h4 className="font-semibold mb-3 text-yellow-400 text-sm uppercase tracking-wide">
             Specialized Solutions For
           </h4>
-          <ul className="space-y-2 mb-5">
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-2 mb-5">
             {[
               "High-temperature applications (up to 350°F)",
               "Highly corrosive environments",
@@ -404,7 +406,7 @@ function ServicesGrid() {
           <h4 className="font-semibold mb-3 text-yellow-400 text-sm uppercase tracking-wide">
             Maintenance Program Components
           </h4>
-          <ul className="space-y-2 mb-5">
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-2 mb-5">
             {[
               "Scheduled inspection intervals",
               "Preventative maintenance procedures",
