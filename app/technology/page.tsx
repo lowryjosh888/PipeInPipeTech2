@@ -4,16 +4,36 @@ import PipeModel3D from "../../components/PipeModel3D"
 
 export default function Technology() {
   return (
-    <div className="min-h-screen w-full bg-gray-100 py-12 pt-32">
-      <div className="w-full px-4">
+    <div className="min-h-screen w-full bg-gray-100">
+
+      {/* ── Step 1: Hero Banner ── */}
+      <div
+        className="relative w-full h-72 md:h-96 flex items-end"
+        style={{
+          backgroundImage: "url('/images/offshore-pipeline-installation.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+            IT3 System Technology
+          </h1>
+        </div>
+      </div>
+
+      {/* ── Main Content ── */}
+      <div className="w-full px-4 py-12">
         <div className="max-w-7xl mx-auto">
           <Link href="/" className="inline-flex items-center text-yellow-400 hover:text-yellow-500 mb-8">
             <ArrowLeft className="mr-2" /> Back to Home
           </Link>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">IT3 System Technology</h1>
         </div>
 
         <div className="bg-white rounded-lg shadow-xl p-8 max-w-7xl mx-auto">
+
+          {/* What is the IT3 System */}
           <div className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">What is the IT3 System?</h2>
             <p className="text-gray-600 mb-4">
@@ -30,9 +50,32 @@ export default function Technology() {
               industrial environments.
             </p>
           </div>
-          <PipeModel3D />
+
+          {/* ── Step 2 & 3: 3D Model in dark container with instructional text ── */}
+          <div className="rounded-xl overflow-hidden mb-10" style={{ background: "#0f1e35" }}>
+            <div className="px-6 pt-6 pb-2 text-center">
+              <p className="text-yellow-400 text-sm font-semibold tracking-widest uppercase mb-1">
+                Interactive 3D Model
+              </p>
+              <p className="text-gray-300 text-sm">
+                Click and drag to rotate &nbsp;&bull;&nbsp; Scroll to zoom &nbsp;&bull;&nbsp; Right-click to pan
+              </p>
+            </div>
+            <PipeModel3D />
+          </div>
+
+          {/* Compressed Liner Classification */}
           <div className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Compressed Liner Classification</h2>
+
+            {/* ── Step 4: Pull quote ── */}
+            <blockquote className="border-l-4 border-yellow-400 bg-gray-50 px-6 py-4 my-6 rounded-r-lg">
+              <p className="text-gray-700 text-lg italic leading-relaxed">
+                "The design is classified as a compressed liner since the plastic to steel conformity is not derived
+                from altering the polymer component."
+              </p>
+            </blockquote>
+
             <p className="text-gray-600 mb-4">
               The IT3 System design is based on the concept that the liner is not directly bonded/fixed to the ID of the
               steel casing through deformation which does not affect its natural state. Through this unique concept the
@@ -55,48 +98,103 @@ export default function Technology() {
             </p>
           </div>
 
+          {/* Neat Cement Grout */}
           <div className="border-t border-gray-200 pt-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">The Crucial Component: Neat Cement Grout</h2>
-            <p className="text-gray-600 mb-4">
+
+            {/* ── Step 4: Pull quote ── */}
+            <blockquote className="border-l-4 border-yellow-400 bg-gray-50 px-6 py-4 my-6 rounded-r-lg">
+              <p className="text-gray-700 text-lg italic leading-relaxed">
+                "Once injected and cured in the annular space, the cement combines the two conduits into one
+                multiwall pipe — the most advantageous solution for double-wall containment."
+              </p>
+            </blockquote>
+
+            <p className="text-gray-600 mb-6">
               The most crucial and fundamental component is the specific neat cement grout formula that once injected
               and cured in the annular space it combines the two conduits into one multiwall pipe. This makes the IT3
               System the most advantageous solution that meets or exceeds double wall containment requirements.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Key Properties of the Cement Grout</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>
-                    • High modulus of elasticity in compression (2.0-3.0x10<sup>6</sup> psi)
+
+            {/* ── Step 5: Yellow left-border bullet cards ── */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+              <div
+                className="rounded-lg p-6 border-l-4 border-yellow-400"
+                style={{ background: "#0f1e35" }}
+              >
+                <h3 className="text-lg font-semibold text-yellow-400 mb-4">Key Properties of the Cement Grout</h3>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-400 mt-0.5">▸</span>
+                    High modulus of elasticity in compression (2.0–3.0×10<sup>6</sup> psi)
                   </li>
-                  <li>• High compressive strength (8,000-10,000 psi)</li>
-                  <li>• Low shrinkage value</li>
-                  <li>• Hydraulic set - external heat is not required to cure</li>
-                  <li>• Similar thermal expansion to steel</li>
-                  <li>• Optimum flow properties</li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-400 mt-0.5">▸</span>
+                    High compressive strength (8,000–10,000 psi)
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-400 mt-0.5">▸</span>
+                    Low shrinkage value
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-400 mt-0.5">▸</span>
+                    Hydraulic set — external heat not required to cure
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-400 mt-0.5">▸</span>
+                    Similar thermal expansion to steel
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-400 mt-0.5">▸</span>
+                    Optimum flow properties
+                  </li>
                 </ul>
               </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Functions of the Cement Grout</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Combines the two conduits into a unified multiwall pipe</li>
-                  <li>• Meets or exceeds double-wall containment standards</li>
-                  <li>• Provides hoop strength transmission for structural integrity</li>
-                  <li>• Serves as a secondary corrosion barrier</li>
-                  <li>• Offers negative buoyancy, enhancing stability in submerged environments</li>
-                  <li>• Acts as a thermal insulator</li>
+              <div
+                className="rounded-lg p-6 border-l-4 border-yellow-400"
+                style={{ background: "#0f1e35" }}
+              >
+                <h3 className="text-lg font-semibold text-yellow-400 mb-4">Functions of the Cement Grout</h3>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-400 mt-0.5">▸</span>
+                    Combines the two conduits into a unified multiwall pipe
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-400 mt-0.5">▸</span>
+                    Meets or exceeds double-wall containment standards
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-400 mt-0.5">▸</span>
+                    Provides hoop strength transmission for structural integrity
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-400 mt-0.5">▸</span>
+                    Serves as a secondary corrosion barrier
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-400 mt-0.5">▸</span>
+                    Offers negative buoyancy, enhancing stability in submerged environments
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-400 mt-0.5">▸</span>
+                    Acts as a thermal insulator
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
 
+          {/* Technical Example */}
           <div className="border-t border-gray-200 pt-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Technical Example</h2>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-6">
               By intentionally disregarding the compressive effect of the cement on the inner liner during its set, a
               specific instance using a P.V.C. liner illustrates the magnitude of stress to be projected in the liner
               and steel layers:
             </p>
+
+            {/* Example Parameters */}
             <div className="bg-gray-50 p-6 rounded-lg mb-6">
               <h3 className="text-lg font-semibold text-gray-800 mb-3">Example Parameters</h3>
               <ul className="space-y-2 text-gray-600">
@@ -107,20 +205,41 @@ export default function Technology() {
                 <li>• P.V.C. thickness = .337"</li>
               </ul>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">Results</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Tangential Stress in P.V.C. = 160 psi</li>
-                <li>• Plastic Limit of P.V.C. = 2600 psi</li>
-                <li>• Tangential Stress in Steel = 11,475 psi</li>
-                <li>• Tangential Stress in Steel without IT3 Concept = 21,150 psi</li>
-                <li>• % Reduction in Stress imposed on Steel = 46%</li>
-              </ul>
+
+            {/* ── Step 6: Large bold callout number stats ── */}
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">Results</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="rounded-xl p-5 text-center border-l-4 border-yellow-400" style={{ background: "#0f1e35" }}>
+                <div className="text-4xl font-extrabold text-yellow-400 leading-none mb-1">160</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wide mt-1">psi</div>
+                <div className="text-sm text-gray-300 mt-2">Tangential Stress in P.V.C.</div>
+              </div>
+              <div className="rounded-xl p-5 text-center border-l-4 border-yellow-400" style={{ background: "#0f1e35" }}>
+                <div className="text-4xl font-extrabold text-yellow-400 leading-none mb-1">2,600</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wide mt-1">psi</div>
+                <div className="text-sm text-gray-300 mt-2">Plastic Limit of P.V.C.</div>
+              </div>
+              <div className="rounded-xl p-5 text-center border-l-4 border-yellow-400" style={{ background: "#0f1e35" }}>
+                <div className="text-4xl font-extrabold text-yellow-400 leading-none mb-1">11,475</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wide mt-1">psi</div>
+                <div className="text-sm text-gray-300 mt-2">Tangential Stress in Steel (IT3)</div>
+              </div>
+              <div className="rounded-xl p-5 text-center border-l-4 border-yellow-400" style={{ background: "#0f1e35" }}>
+                <div className="text-4xl font-extrabold text-yellow-400 leading-none mb-1">21,150</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wide mt-1">psi</div>
+                <div className="text-sm text-gray-300 mt-2">Tangential Stress in Steel (No IT3)</div>
+              </div>
+              <div className="col-span-2 md:col-span-2 rounded-xl p-5 text-center border-l-4 border-yellow-400 flex flex-col items-center justify-center" style={{ background: "#0a1628" }}>
+                <div className="text-6xl font-extrabold text-yellow-400 leading-none mb-1">46%</div>
+                <div className="text-base text-gray-200 mt-2 font-semibold">Reduction in Stress Imposed on Steel</div>
+                <div className="text-xs text-gray-400 mt-1">vs. conventional single-wall pipe</div>
+              </div>
             </div>
           </div>
 
+          {/* Manufacturing Options */}
           <div className="border-t border-gray-200 pt-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Manufacturing Options</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Manufacturing Options</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Factory Manufacturing</h3>
@@ -142,7 +261,7 @@ export default function Technology() {
         </div>
 
         {/* Contact Section */}
-        <section className="py-20 bg-gray-900 w-full" id="contact">
+        <section className="py-20 bg-gray-900 w-full mt-12" id="contact">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold text-white mb-4 text-center">Contact Info</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
