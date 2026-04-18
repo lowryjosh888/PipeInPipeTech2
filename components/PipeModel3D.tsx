@@ -77,7 +77,7 @@ export default function PipeModel() {
 
     // Scene setup
     const scene = new THREE.Scene()
-    scene.background = new THREE.Color(0xffffff)
+    scene.background = new THREE.Color(0x0f1e35)
     sceneRef.current = scene
 
     // Camera
@@ -513,14 +513,14 @@ export default function PipeModel() {
   const activeLayer = LAYERS.find((l) => l.id === (selectedLayer || hoveredLayer))
 
   return (
-    <div className="min-h-screen bg-white">
+    <div style={{ background: "#0f1e35" }}>
       {/* Header */}
-      <div className="px-6 py-8 md:px-12">
+      <div className="px-6 py-6 md:px-12">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-light text-slate-900 tracking-tight">
+          <h1 className="text-3xl md:text-4xl font-light text-white tracking-tight">
             Interactive 3D <span className="font-semibold">IT3 System Model</span>
           </h1>
-          <p className="text-slate-600 mt-2 text-lg">4-Layer Pipe System Cross-Section</p>
+          <p className="text-gray-400 mt-2 text-lg">4-Layer Pipe System Cross-Section</p>
         </div>
       </div>
 

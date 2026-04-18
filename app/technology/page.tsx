@@ -36,14 +36,14 @@ export default function Technology() {
           {/* What is the IT3 System */}
           <div className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">What is the IT3 System?</h2>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-800 mb-4">
               IT3 refers to Internal Tube 3-Phase in a multiwall piping configuration which consists of 3 components: a
               smaller plastic pipe (liner) inserted into a larger diameter steel or other hard material (casing) with a
               cement grout injected between the OD of the liner and the ID of the casing (annulus). The primary
               objective in this superior piping application is the implementation in virtually all pipe line
               configurations where reducing, neutralizing and eliminating internal corrosion is imminent.
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-800">
               The trade name IT3 short for Internal Tube 3-Phase reflects the three distinct material layers integrated
               into its design. This innovative multiwall piping system, originally patented by Ken Tierling over 50
               years ago, demonstrates the advanced approach to manufacturing and installation techniques for demanding
@@ -76,20 +76,20 @@ export default function Technology() {
               </p>
             </blockquote>
 
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-800 mb-4">
               The IT3 System design is based on the concept that the liner is not directly bonded/fixed to the ID of the
               steel casing through deformation which does not affect its natural state. Through this unique concept the
               design is classified as a compressed liner since the plastic to steel conformity is not derived from
               altering the polymer component.
             </p>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-800 mb-4">
               In relation to the plastic inner pipe, the design is classified as a compressed liner since the plastic to
               steel connection is not derived through the deformation of the polymeric component. Basically, the design
               inserts an incompressible material at the interface thereby totally limiting radial strain of the inner
               polymer pipe. As a result, the cement annular transfers the majority of stress to the outer casing and
               perfectly anchors the inner pipe.
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-800">
               Due to the extremely low stress in the tensile mode, actuation of microcracking in the plastic is entirely
               avoided. Thus, the IT3 System enables numerous polymeric materials to be successfully implemented without
               jeopardizing their structural integrity. Furthermore, polyethylenes even in the presence of surface-active
@@ -110,7 +110,7 @@ export default function Technology() {
               </p>
             </blockquote>
 
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-800 mb-6">
               The most crucial and fundamental component is the specific neat cement grout formula that once injected
               and cured in the annular space it combines the two conduits into one multiwall pipe. This makes the IT3
               System the most advantageous solution that meets or exceeds double wall containment requirements.
@@ -188,7 +188,7 @@ export default function Technology() {
           {/* Technical Example */}
           <div className="border-t border-gray-200 pt-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Technical Example</h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-800 mb-6">
               By intentionally disregarding the compressive effect of the cement on the inner liner during its set, a
               specific instance using a P.V.C. liner illustrates the magnitude of stress to be projected in the liner
               and steel layers:
@@ -243,14 +243,14 @@ export default function Technology() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Factory Manufacturing</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-800">
                   The multiwall pipe can be manufactured in double-random lengths in a plant, ensuring precise quality
                   control and consistent production standards.
                 </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">In-Situ Installation</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-800">
                   Alternatively, it can be installed in-situ, using existing pipelines as the outer containment layer.
                   This proprietary process revitalizes existing pipelines, restoring them to optimal performance and
                   operating standards.
