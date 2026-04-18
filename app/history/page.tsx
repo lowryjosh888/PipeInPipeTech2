@@ -65,7 +65,7 @@ export default function History() {
             <div className="rounded-xl overflow-hidden mb-6" style={{ background: "#0f1e35" }}>
               <div className="relative h-72 md:h-96">
                 <Image
-                  src="/images/ken-tierling.png"
+                  src="/images/KenTierling.png"
                   alt="Ken Tierling, founder of the IT3 System"
                   fill
                   className="object-contain"
