@@ -86,8 +86,8 @@ export default function Benefits() {
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          {/* Dark overlay so text stays readable */}
-          <div className="absolute inset-0 bg-[#0a1628]/78" />
+          {/* Gradient overlay — darker toward bottom where photo is brighter */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628]/80 via-[#0a1628]/85 to-[#0a1628]/92" />
 
           {/* Content */}
           <div className="relative p-8">
@@ -95,7 +95,7 @@ export default function Benefits() {
               <h2 className="text-2xl font-semibold text-white mb-4">
                 Why Choose The IT3 Multiwall Pipe Rehabilitation Solution?
               </h2>
-              <p className="text-gray-300">
+              <p className="text-white/80">
                 The IT3 Multiwall Piping System offers numerous advantages, addressing challenges with internal corrosion,
                 general pipeline degradation, and overall reduction in pipeline performance and reliability. It is a
                 versatile, cost-effective, and environmentally friendly solution for various industries and applications.
