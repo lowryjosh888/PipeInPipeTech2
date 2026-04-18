@@ -63,11 +63,11 @@ function ServiceModal({
 
         {/* Photo or placeholder */}
         {service.photo ? (
-          <div className="h-64 w-full overflow-hidden rounded-t-2xl">
+          <div className="w-full overflow-hidden rounded-t-2xl bg-slate-900">
             <img
               src={service.photo}
               alt={service.title}
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-contain"
             />
           </div>
         ) : (
