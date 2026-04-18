@@ -49,7 +49,7 @@ function ServiceModal({
 
       {/* Modal card */}
       <div
-        className="animate-modalIn relative bg-[#0f1e35] border border-slate-600 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl shadow-black/60"
+        className="animate-modalIn relative bg-[#0f1e35] border border-slate-600 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl shadow-black/60"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
@@ -202,7 +202,7 @@ function ServicesGrid() {
           <h4 className="font-semibold mb-3 text-yellow-400 text-sm uppercase tracking-wide">
             Benefits of In-Situ Rehabilitation
           </h4>
-          <ul className="space-y-2 mb-5">
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-2 mb-5">
             {[
               "No excavation required — minimal surface disruption",
               "60–70% cost savings compared to full replacement",
