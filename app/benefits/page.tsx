@@ -53,13 +53,28 @@ export default function Benefits() {
   ]
 
   return (
-    <div className="min-h-screen w-full bg-gray-100 py-12 pt-32">
-      <div className="w-full px-4">
+    <div className="min-h-screen w-full bg-gray-100">
+
+      {/* Hero Banner */}
+      <section className="relative w-full h-80 md:h-[450px] overflow-hidden">
+        <img
+          src="/images/Benefits.jpg"
+          alt="Benefits of the IT3 System"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/40 to-black/70" />
+        <div className="absolute inset-0 flex items-end justify-center pb-12 px-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-white text-center drop-shadow-lg">
+            Benefits of the IT3 System
+          </h1>
+        </div>
+      </section>
+
+      <div className="w-full px-4 py-12">
         <div className="max-w-7xl mx-auto">
           <Link href="/" className="inline-flex items-center text-yellow-400 hover:text-yellow-500 mb-8">
             <ArrowLeft className="mr-2" /> Back to Home
           </Link>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">Benefits of the IT3 System</h1>
         </div>
 
         <div className="bg-white rounded-lg shadow-xl p-8 max-w-7xl mx-auto mb-12">
