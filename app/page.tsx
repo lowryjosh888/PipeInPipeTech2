@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { Phone, Mail, MapPin, ChevronDown, ChevronUp } from "lucide-react"
 import { useState, useEffect } from "react"
@@ -315,14 +314,26 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full h-screen">
-        <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DJI_0009.jpg-Z0sUEdebkowi840i4PNGwLvxCAL0te.jpeg"
-          alt="Aerial view of construction site"
-          fill
-          className="object-cover"
-          priority
-        />
+      <section className="relative w-full h-screen overflow-hidden">
+        {/* Vimeo Video Background — background=1 enables autoplay/loop/mute with no controls */}
+        <div className="absolute inset-0 w-full h-full">
+          <iframe
+            src="https://player.vimeo.com/video/1183195508?badge=0&autopause=0&player_id=0&app_id=58479&loop=1&background=1&muted=1&autoplay=1"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              width: "100vw",
+              height: "56.25vw",   /* 16:9 aspect ratio */
+              minHeight: "100vh",
+              minWidth: "177.78vh", /* 100/56.25 — ensures coverage on tall/narrow viewports */
+              transform: "translate(-50%, -50%)",
+            }}
+            title="PPTClippedVideo1"
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative h-full w-full flex items-center justify-center">
           <div className="max-w-3xl text-center px-4">
