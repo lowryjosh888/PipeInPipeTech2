@@ -178,7 +178,7 @@ function ServicesGrid() {
     },
     {
       title: "In-Situ Pipe Rehabilitation",
-      photo: null,
+      photo: "/images/In-Situ-Pipe-Rehabilitation.jpg",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +227,7 @@ function ServicesGrid() {
     },
     {
       title: "Pipeline Assessment",
-      photo: null,
+      photo: "/images/Pipeline-Assessment.JPG",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -276,7 +276,7 @@ function ServicesGrid() {
     },
     {
       title: "Custom Engineering Solutions",
-      photo: null,
+      photo: "/images/Custom-Engineering-Solutions.jpeg",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -331,7 +331,7 @@ function ServicesGrid() {
     },
     {
       title: "Environmental Sustainability",
-      photo: null,
+      photo: "/images/Environmental-Sustainability.jpeg",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -380,7 +380,7 @@ function ServicesGrid() {
     },
     {
       title: "Maintenance Programs",
-      photo: null,
+      photo: "/images/Maintenance-Programs.jpg",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
