@@ -77,7 +77,7 @@ export default function HistoryV2() {
                   />
                 </div>
                 <p className="text-center text-gray-500 text-xs mt-2 px-2 leading-snug">
-                  Ken Tierling<br />Founder, IT3 Multiwall Piping System
+                  Ken Tierling
                 </p>
               </div>
 
@@ -94,7 +94,9 @@ export default function HistoryV2() {
                   corrosion complications while still meeting or exceeding double wall containment requirements. The design
                   focused on the proposed fusion of three materials (IT3), sliding a corrosion-resistant lining inside a
                   stronger metal tube; thus providing a material option that contains chemical and mechanical properties
-                  resistant to corrosion. The design was a success and the first installation took place in 1971 in
+                  resistant to corrosion.
+                  <br /><br />
+                  The design was a success and the first installation took place in 1971 in
                   Alberta, Canada.
                 </p>
               </div>
