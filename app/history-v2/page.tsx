@@ -65,14 +65,14 @@ export default function HistoryV2() {
             <div className="w-16 h-1 bg-yellow-400 mb-6 rounded-full" />
 
             <div className="flex gap-8 items-start">
-              {/* Photo — ~42% width for a 40/60 split */}
-              <div className="flex-none" style={{ width: "42%" }}>
+              {/* Photo — original size, top-aligned */}
+              <div className="flex-shrink-0" style={{ width: 280 }}>
                 <div className="rounded-lg overflow-hidden border-4 border-gray-200 shadow-md">
                   <Image
                     src="/images/KenTierling.png"
                     alt="Ken Tierling, founder of the IT3 System"
-                    width={500}
-                    height={400}
+                    width={280}
+                    height={340}
                     className="object-cover object-top w-full"
                   />
                 </div>
