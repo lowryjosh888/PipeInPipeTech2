@@ -64,15 +64,15 @@ export default function HistoryV2() {
             <h2 className="text-2xl font-semibold text-gray-800 mb-2">The Founder of IT3: Ken Tierling's Story</h2>
             <div className="w-16 h-1 bg-yellow-400 mb-6 rounded-full" />
 
-            <div className="flex gap-8 items-center">
-              {/* Photo — ~16% smaller than previous */}
-              <div className="flex-shrink-0" style={{ width: 235 }}>
+            <div className="flex gap-8 items-start">
+              {/* Photo — 30% larger than previous (235→305, 285→370) */}
+              <div className="flex-shrink-0" style={{ width: 305 }}>
                 <div className="rounded-lg overflow-hidden border-4 border-gray-200 shadow-md">
                   <Image
                     src="/images/KenTierling.png"
                     alt="Ken Tierling, founder of the IT3 System"
-                    width={235}
-                    height={285}
+                    width={305}
+                    height={370}
                     className="object-cover object-top w-full"
                   />
                 </div>
@@ -81,15 +81,23 @@ export default function HistoryV2() {
                 </p>
               </div>
 
-              {/* Paragraph 1 only — vertically centered beside photo */}
-              <p className="text-gray-800 flex-1 min-w-0">
-                In the mid 60's Mr. Tierling served as the district manager for Magna Chem. Ltd. in Alberta, Canada
-                which would dispense chemical solutions to try and neutralize pipeline corrosion issues. Realizing that
-                pipe line corrosion was becoming difficult to manage and grave concern, Mr. Tierling coincidently met
-                Bennant Fruck an engineer in the same field. Together they teamed and developed the IT3 Multiwall
-                Piping System that contains / eliminates corrosion complications while meeting or exceeding double wall
-                containment requirements, with the first installation occurring in 1971 in Alberta, Canada.
-              </p>
+              {/* Two paragraphs beside the photo */}
+              <div className="flex-1 min-w-0">
+                <p className="text-gray-800 mb-4">
+                  In the mid 60's Mr. Tierling served as the district manager for Magna Chem. Ltd. in Alberta, Canada
+                  which would dispense chemical solutions to try and neutralize pipeline corrosion issues. Realizing that
+                  pipe line corrosion was becoming difficult to manage and grave concern, Mr. Tierling coincidently met
+                  Bennant Fruck an engineer in the same field.
+                </p>
+                <p className="text-gray-800">
+                  Together they teamed and developed the IT3 Multiwall Piping System which would contain or eliminate
+                  corrosion complications while still meeting or exceeding double wall containment requirements. The design
+                  focused on the proposed fusion of three materials (IT3), sliding a corrosion-resistant lining inside a
+                  stronger metal tube; thus providing a material option that contains chemical and mechanical properties
+                  resistant to corrosion. The design was a success and the first installation took place in 1971 in
+                  Alberta, Canada.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -119,8 +127,8 @@ export default function HistoryV2() {
                 </p>
               </div>
 
-              {/* Map on the right — position:relative + z-index:0 contains Leaflet's internal z-indices */}
-              <div className="flex-1 min-w-0" style={{ position: "relative", zIndex: 0 }}>
+              {/* Map on the right */}
+              <div className="flex-1 min-w-0">
                 <HistoryMap />
               </div>
             </div>
