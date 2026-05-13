@@ -12,7 +12,6 @@ export default function HistoryV2() {
     { era: "Late 1960s", text: "Mr. Tierling meets engineer Bennant Fruck, beginning their collaboration" },
     { era: "1968",      text: "Tierling & Fruck begin dedicated engineering, development, and installation of the patented IT3 multiwall system" },
     { era: "1971",      text: "First IT3 System successfully installed" },
-    // 1973 entry removed per brief
     { era: "1970s–80s", text: "Expansion of IT3 System applications across multiple industries" },
     { era: "1980s–90s", text: "International expansion with installations in South America and the Caribbean" },
     { era: "2000s–10s", text: "Continued growth with major projects in Peru, Chile, and other locations" },
@@ -60,28 +59,29 @@ export default function HistoryV2() {
 
         <div className="bg-white rounded-lg shadow-xl p-8 max-w-7xl mx-auto mb-12">
 
-          {/* ── Founder Story: photo floated left, text wrapping right ── */}
+          {/* ── Founder Section: photo left, paragraph 1 right ── */}
           <div className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">The Founder of IT3: Ken Tierling's Story</h2>
 
-            {/* Float container — clears after */}
-            <div className="overflow-hidden">
-              {/* Floated photo */}
-              <div className="float-left mr-8 mb-4 rounded-lg overflow-hidden border-4 border-gray-200 shadow-md" style={{ width: 240 }}>
-                <Image
-                  src="/images/KenTierling.png"
-                  alt="Ken Tierling, founder of the IT3 System"
-                  width={240}
-                  height={280}
-                  className="object-cover w-full"
-                />
-                <p className="text-center text-gray-500 text-xs py-2 px-2 bg-gray-50 leading-snug">
+            <div className="flex gap-8 items-start">
+              {/* Photo — sized to approximately match paragraph 1 height */}
+              <div className="flex-shrink-0" style={{ width: 280 }}>
+                <div className="rounded-lg overflow-hidden border-4 border-gray-200 shadow-md">
+                  <Image
+                    src="/images/KenTierling.png"
+                    alt="Ken Tierling, founder of the IT3 System"
+                    width={280}
+                    height={340}
+                    className="object-cover object-top w-full"
+                  />
+                </div>
+                <p className="text-center text-gray-500 text-xs mt-2 px-2 leading-snug">
                   Ken Tierling<br />Founder, IT3 Multiwall Piping System
                 </p>
               </div>
 
-              {/* Text flows to the right and below the photo */}
-              <p className="text-gray-800 mb-4">
+              {/* Paragraph 1 only */}
+              <p className="text-gray-800 flex-grow">
                 In the mid 60's Mr. Tierling served as the district manager for Magna Chem. Ltd. in Alberta, Canada
                 which would dispense chemical solutions to try and neutralize pipeline corrosion issues. Realizing that
                 pipe line corrosion was becoming difficult to manage and grave concern, Mr. Tierling coincidently met
@@ -89,78 +89,58 @@ export default function HistoryV2() {
                 Piping System that contains / eliminates corrosion complications while meeting or exceeding double wall
                 containment requirements, with the first installation occurring in 1971 in Alberta, Canada.
               </p>
-              <p className="text-gray-800">
-                Since that time the IT3 System has been installed in both onshore and offshore environments, in a wide
-                range of fluid streams and multiphase systems, and in numerous climates and terrains across the American
-                continent, including the North Slope of Alaska, the streets of New York City, the Bahamas, California,
-                and Peru, among others. The system operates with all types of fluids such as crude oil, oil, gas, water,
-                slurry, and multi-phase systems with pressures ranging from vacuum to 3500 PSI. Additionally, the PPT
-                IT3 system has developed projects in areas where endangered species are found, thus ensuring the
-                system's ability to protect the environment. This remarkable versatility has made it the preferred
-                solution across multiple industries, including oil, gas, chemical, mining, power utility, and municipal
-                infrastructure. To date, pipelines constructed using the IT3 System continue to operate with sustained
-                integrity and no signs of degradation over time, enabling operations to be carried out with confidence,
-                safety, and efficiency.
-              </p>
             </div>
           </div>
 
-          {/* ── Interactive Map ── */}
+          {/* ── Global Reach: paragraph 2 left, map right ── */}
           <div className="border-t border-gray-200 pt-8 mb-8">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Global Reach</h3>
-            <HistoryMap />
+            <div className="flex gap-8 items-start">
+              {/* Paragraph 2 on the left */}
+              <div className="flex-1 min-w-0">
+                <p className="text-gray-800">
+                  Since that time the IT3 System has been installed in both onshore and offshore environments, in a wide
+                  range of fluid streams and multiphase systems, and in numerous climates and terrains across the American
+                  continent, including the North Slope of Alaska, the streets of New York City, the Bahamas, California,
+                  and Peru, among others. The system operates with all types of fluids such as crude oil, oil, gas, water,
+                  slurry, and multi-phase systems with pressures ranging from vacuum to 3500 PSI. Additionally, the PPT
+                  IT3 system has developed projects in areas where endangered species are found, thus ensuring the
+                  system's ability to protect the environment. This remarkable versatility has made it the preferred
+                  solution across multiple industries, including oil, gas, chemical, mining, power utility, and municipal
+                  infrastructure. To date, pipelines constructed using the IT3 System continue to operate with sustained
+                  integrity and no signs of degradation over time, enabling operations to be carried out with confidence,
+                  safety, and efficiency.
+                </p>
+              </div>
+
+              {/* Map on the right */}
+              <div className="flex-1 min-w-0">
+                <HistoryMap />
+              </div>
+            </div>
           </div>
 
-          {/* About IT3 Multiwall System */}
+          {/* ── Notable Installations ── */}
           <div className="border-t border-gray-200 pt-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">About IT3 Multiwall System</h3>
-            <blockquote className="border-l-4 border-yellow-400 bg-gray-50 px-6 py-4 my-6 rounded-r-lg">
-              <p className="text-gray-700 text-lg italic leading-relaxed">
-                "Since 1968, dedicated to engineering solutions that eliminate galvanic corrosion — meeting
-                the double-wall containment requirements of petroleum, mining, and power line industries."
-              </p>
-            </blockquote>
-            <p className="text-gray-800 mb-4">
-              Since 1968, Mr. Tierling has been dedicated to the engineering, development, and installation of its
-              patented multiwall system, IT3, which eliminates galvanic corrosion problems and meets the necessary
-              requirements of the petroleum, mining, and power line industries regarding double-wall containment.
-            </p>
-            <p className="text-gray-800 mb-4">
-              The IT3 Multiwall Piping System has been installed in numerous climates and terrains across the American
-              continent, including the North Slope of Alaska, the streets of New York City, the Bahamas, California, and
-              Peru, among others. The system operates with all types of fluids such as crude oil, oil, gas, water,
-              slurry, and multi-phase systems with pressures ranging from vacuum to 3500 PSI. Additionally, the PPT IT3
-              system has developed projects in areas where endangered species are found, thus ensuring the system's
-              ability to protect the environment.
-            </p>
+            <p className="text-gray-800 font-medium mb-4">Notable installations include:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {installations.map((loc, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-3 rounded-lg px-4 py-3 border-l-4 border-yellow-400"
+                  style={{ background: "#0f1e35" }}
+                >
+                  <span className="text-yellow-400 mt-0.5 flex-shrink-0">▸</span>
+                  <span className="text-gray-300 text-sm">{loc}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* IT3 Technology section */}
-          <div className="border-t border-gray-200 pt-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">The IT3 Multiwall System Technology</h3>
-            <p className="text-gray-800 mb-4">
-              PPT's design focused on the proposed fusion of three materials (IT3), sliding a corrosion-resistant lining
-              inside a stronger metal tube; thus providing a material option that contains chemical and mechanical
-              properties resistant to corrosion.
-            </p>
-            <p className="text-gray-800 mb-4">
-              The important art and science of the procedure consists of controlling the flow characteristics and
-              properties of a non-Newtonian fluid, the cement slurry, to ensure complete continuity of the stress
-              transfer mechanism. Our patented techniques, based on decades of experience, are the only ones known to
-              make a very high success rate.
-            </p>
-            <p className="text-gray-800 mb-4">
-              PPT engineers determine the selection of the internal lining material (fiberglass reinforced plastic,
-              polyethylene, polybutylene, ceramics, PVC, etc.). These are chosen for their high corrosion resistance and
-              excellent flow characteristics. The coating must also adapt to present and future operational demands.
-            </p>
-            <p className="text-gray-800 mb-4">
-              The cement slurry, its design and mixture is exclusive to the IT3 system. The cement injected into the
-              annular space confines the lining, managing to join the lining with the outer tube.
-            </p>
-          </div>
+          {/* ── Complete Project History (collapsible) ── */}
+          <CollapsibleProjectHistory />
 
-          {/* ── Evolution Timeline (1973 entry removed) ── */}
+          {/* ── Evolution Timeline (at bottom) ── */}
           <div className="border-t border-gray-200 pt-8 mb-8">
             <h3 className="text-xl font-semibold text-gray-800 mb-8">Evolution of the IT3 System</h3>
             <div className="relative">
@@ -193,45 +173,6 @@ export default function HistoryV2() {
             </div>
           </div>
 
-          {/* Complete Project History (collapsible) */}
-          <CollapsibleProjectHistory />
-
-          {/* Global Implementation */}
-          <div className="border-t border-gray-200 pt-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Global Implementation</h3>
-            <blockquote className="border-l-4 border-yellow-400 bg-gray-50 px-6 py-4 my-6 rounded-r-lg">
-              <p className="text-gray-700 text-lg italic leading-relaxed">
-                "Over 54 years and 65+ projects across the Americas — every IT3 pipeline constructed to date
-                continues to operate with sustained integrity and no signs of degradation."
-              </p>
-            </blockquote>
-            <p className="text-gray-800 mb-6">
-              Over the past 54+ years in the hydrocarbon industry (Oil &amp; Gas), the IT3 Multiwall System has been
-              effectively engineered and applied in over 65 projects throughout the Americas — including North, Central,
-              and South America, as well as the Caribbean. To date, pipelines constructed using the IT3 System continue
-              to operate with sustained integrity and no signs of degradation over time, enabling operations to be
-              carried out with confidence, safety, and efficiency.
-            </p>
-            <p className="text-gray-800 font-medium mb-4">Notable installations include:</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
-              {installations.map((loc, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-3 rounded-lg px-4 py-3 border-l-4 border-yellow-400"
-                  style={{ background: "#0f1e35" }}
-                >
-                  <span className="text-yellow-400 mt-0.5 flex-shrink-0">▸</span>
-                  <span className="text-gray-300 text-sm">{loc}</span>
-                </div>
-              ))}
-            </div>
-            <p className="text-gray-800">
-              The IT3 System has been successfully implemented in various applications, handling fluid streams and
-              multiphase systems with pressures ranging from vacuum to 3500 psi. This remarkable versatility has made it
-              the preferred solution across multiple industries, including oil, gas, chemical, mining, power utility,
-              and municipal infrastructure.
-            </p>
-          </div>
         </div>
 
         {/* Contact Section */}

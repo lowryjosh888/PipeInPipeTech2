@@ -45,10 +45,13 @@ export default function HistoryMap() {
       if (!L) return
 
       const map = L.map(el, {
-        center: [32, -90],
+        center: [20, -90],
         zoom: 3,
         scrollWheelZoom: false,
         zoomControl: true,
+        maxBounds: [[-65, -175], [75, -15]],
+        maxBoundsViscosity: 1.0,
+        minZoom: 2,
       })
 
       L.tileLayer(
