@@ -8,7 +8,8 @@ export default function CollapsibleProjectHistory() {
 
   return (
     <div className="border-t border-gray-200 pt-8">
-      <h3 className="text-xl font-semibold text-gray-800 mb-4">Complete Project History</h3>
+      <h3 className="text-xl font-semibold text-gray-800 mb-2">Complete Project History</h3>
+      <div className="w-16 h-1 bg-yellow-400 mb-4 rounded-full" />
       <p className="text-gray-600 mb-4">
         Presented below is a comprehensive list of projects completed since 1971, demonstrating the versatility and
         worldwide application of the IT3 System.

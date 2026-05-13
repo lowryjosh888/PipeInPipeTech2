@@ -61,17 +61,18 @@ export default function HistoryV2() {
 
           {/* ── Founder Section: photo left, paragraph 1 right ── */}
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">The Founder of IT3: Ken Tierling's Story</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">The Founder of IT3: Ken Tierling's Story</h2>
+            <div className="w-16 h-1 bg-yellow-400 mb-6 rounded-full" />
 
             <div className="flex gap-8 items-start">
-              {/* Photo — sized to approximately match paragraph 1 height */}
-              <div className="flex-shrink-0" style={{ width: 280 }}>
+              {/* Photo — ~42% width for a 40/60 split */}
+              <div className="flex-none" style={{ width: "42%" }}>
                 <div className="rounded-lg overflow-hidden border-4 border-gray-200 shadow-md">
                   <Image
                     src="/images/KenTierling.png"
                     alt="Ken Tierling, founder of the IT3 System"
-                    width={280}
-                    height={340}
+                    width={500}
+                    height={400}
                     className="object-cover object-top w-full"
                   />
                 </div>
@@ -81,7 +82,7 @@ export default function HistoryV2() {
               </div>
 
               {/* Paragraph 1 only */}
-              <p className="text-gray-800 flex-grow">
+              <p className="text-gray-800 flex-1 min-w-0">
                 In the mid 60's Mr. Tierling served as the district manager for Magna Chem. Ltd. in Alberta, Canada
                 which would dispense chemical solutions to try and neutralize pipeline corrosion issues. Realizing that
                 pipe line corrosion was becoming difficult to manage and grave concern, Mr. Tierling coincidently met
@@ -94,7 +95,8 @@ export default function HistoryV2() {
 
           {/* ── Global Reach: paragraph 2 left, map right ── */}
           <div className="border-t border-gray-200 pt-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-6">Global Reach</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Global Reach</h3>
+            <div className="w-16 h-1 bg-yellow-400 mb-6 rounded-full" />
             <div className="flex gap-8 items-start">
               {/* Paragraph 2 on the left */}
               <div className="flex-1 min-w-0">
@@ -102,12 +104,16 @@ export default function HistoryV2() {
                   Since that time the IT3 System has been installed in both onshore and offshore environments, in a wide
                   range of fluid streams and multiphase systems, and in numerous climates and terrains across the American
                   continent, including the North Slope of Alaska, the streets of New York City, the Bahamas, California,
-                  and Peru, among others. The system operates with all types of fluids such as crude oil, oil, gas, water,
+                  and Peru, among others.
+                  <br /><br />
+                  The system operates with all types of fluids such as crude oil, oil, gas, water,
                   slurry, and multi-phase systems with pressures ranging from vacuum to 3500 PSI. Additionally, the PPT
                   IT3 system has developed projects in areas where endangered species are found, thus ensuring the
                   system's ability to protect the environment. This remarkable versatility has made it the preferred
                   solution across multiple industries, including oil, gas, chemical, mining, power utility, and municipal
-                  infrastructure. To date, pipelines constructed using the IT3 System continue to operate with sustained
+                  infrastructure.
+                  <br /><br />
+                  To date, pipelines constructed using the IT3 System continue to operate with sustained
                   integrity and no signs of degradation over time, enabling operations to be carried out with confidence,
                   safety, and efficiency.
                 </p>
@@ -122,7 +128,8 @@ export default function HistoryV2() {
 
           {/* ── Notable Installations ── */}
           <div className="border-t border-gray-200 pt-8 mb-8">
-            <p className="text-gray-800 font-medium mb-4">Notable installations include:</p>
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Notable Installations</h3>
+            <div className="w-16 h-1 bg-yellow-400 mb-6 rounded-full" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {installations.map((loc, i) => (
                 <div
@@ -142,7 +149,8 @@ export default function HistoryV2() {
 
           {/* ── Evolution Timeline (at bottom) ── */}
           <div className="border-t border-gray-200 pt-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-8">Evolution of the IT3 System</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Evolution of the IT3 System</h3>
+            <div className="w-16 h-1 bg-yellow-400 mb-8 rounded-full" />
             <div className="relative">
               {/* Vertical yellow line */}
               <div
