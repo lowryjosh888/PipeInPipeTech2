@@ -196,7 +196,7 @@ export default function HistoryMap() {
       const script = document.createElement("script")
       script.id = "leaflet-js"
       script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      script.onload = initMap
+      script.onload = () => initMap()
       document.head.appendChild(script)
     }
 
