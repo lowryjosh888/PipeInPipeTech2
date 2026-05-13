@@ -131,7 +131,7 @@ export default function HistoryMap() {
   }, [])
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <div
         ref={mapRef}
         style={{

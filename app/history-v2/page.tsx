@@ -64,15 +64,15 @@ export default function HistoryV2() {
             <h2 className="text-2xl font-semibold text-gray-800 mb-2">The Founder of IT3: Ken Tierling's Story</h2>
             <div className="w-16 h-1 bg-yellow-400 mb-6 rounded-full" />
 
-            <div className="flex gap-8 items-start">
-              {/* Photo — original size, top-aligned */}
-              <div className="flex-shrink-0" style={{ width: 280 }}>
+            <div className="flex gap-8 items-center">
+              {/* Photo — ~16% smaller than previous */}
+              <div className="flex-shrink-0" style={{ width: 235 }}>
                 <div className="rounded-lg overflow-hidden border-4 border-gray-200 shadow-md">
                   <Image
                     src="/images/KenTierling.png"
                     alt="Ken Tierling, founder of the IT3 System"
-                    width={280}
-                    height={340}
+                    width={235}
+                    height={285}
                     className="object-cover object-top w-full"
                   />
                 </div>
@@ -81,7 +81,7 @@ export default function HistoryV2() {
                 </p>
               </div>
 
-              {/* Paragraph 1 only */}
+              {/* Paragraph 1 only — vertically centered beside photo */}
               <p className="text-gray-800 flex-1 min-w-0">
                 In the mid 60's Mr. Tierling served as the district manager for Magna Chem. Ltd. in Alberta, Canada
                 which would dispense chemical solutions to try and neutralize pipeline corrosion issues. Realizing that
@@ -119,8 +119,8 @@ export default function HistoryV2() {
                 </p>
               </div>
 
-              {/* Map on the right */}
-              <div className="flex-1 min-w-0">
+              {/* Map on the right — position:relative + z-index:0 contains Leaflet's internal z-indices */}
+              <div className="flex-1 min-w-0" style={{ position: "relative", zIndex: 0 }}>
                 <HistoryMap />
               </div>
             </div>
