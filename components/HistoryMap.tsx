@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 
-interface Location {
+interface MapPin {
   lat: number
   lng: number
   label: string
@@ -10,7 +10,7 @@ interface Location {
   detail?: string
 }
 
-const LOCATIONS: Location[] = [
+const LOCATIONS: MapPin[] = [
   {
     lat: 70.2, lng: -148.3,
     label: "Prudhoe Bay, AK",
@@ -128,7 +128,7 @@ export default function HistoryMap() {
 
       const markers: any[] = []
 
-      LOCATIONS.forEach((loc) => {
+      LOCATIONS.forEach((loc: MapPin) => {
         const isMultiple = loc.count > 1
 
         const iconHtml = isMultiple
