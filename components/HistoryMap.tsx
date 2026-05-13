@@ -11,176 +11,92 @@ interface MapPin {
 }
 
 const LOCATIONS: MapPin[] = [
-  {
-    lat: 70.2, lng: -148.3,
-    label: "Prudhoe Bay, AK",
-    count: 1,
-    detail: "Arco Alaska — 3-phase oil/gas/water pipeline (1982)",
-  },
-  {
-    lat: 54.5, lng: -114.5,
-    label: "Alberta, Canada",
-    count: 8,
-    detail: "Drayton Valley, Legal, Pembina, Rimby, Joarcam, Swan Hills, Braemar (1971–1984)",
-  },
-  {
-    lat: 50.0, lng: -104.5,
-    label: "Saskatchewan, Canada",
-    count: 3,
-    detail: "Estevan, Weyburn, Parkman (1971–1984)",
-  },
-  {
-    lat: 46.9, lng: -102.8,
-    label: "Dickinson, ND",
-    count: 6,
-    detail: "Multiple Conoco 3-phase oil/gas/water pipelines (1978–1982)",
-  },
-  {
-    lat: 37.2, lng: -109.2,
-    label: "Aneth, UT",
-    count: 4,
-    detail: "Superior Oil & Texaco — multiple projects (1973–1981)",
-  },
-  {
-    lat: 35.0, lng: -119.5,
-    label: "California",
-    count: 4,
-    detail: "Santa Barbara (1982), Bakersfield (2005), and other locations (1976–2005)",
-  },
-  {
-    lat: 32.7, lng: -103.1,
-    label: "Hobbs, NM",
-    count: 1,
-    detail: "Shell Oil — produced water pipeline (1981)",
-  },
-  {
-    lat: 32.4, lng: -117.1,
-    label: "Rosarito, Mexico",
-    count: 1,
-    detail: "PEMEX — fuel oil offshore pipeline (2004)",
-  },
-  {
-    lat: 31.5, lng: -102.3,
-    label: "Odessa, TX",
-    count: 3,
-    detail: "Shell Oil — multiple fresh/salt water pipelines (1980–1981)",
-  },
-  {
-    lat: 29.5, lng: -97.2,
-    label: "South Texas",
-    count: 4,
-    detail: "San Antonio (1984), Corpus Christi (1981), Houston (1980), Texas City (1984)",
-  },
-  {
-    lat: 40.7, lng: -74.1,
-    label: "New York Metro",
-    count: 3,
-    detail: "Con Edison East River, NYC (1997) · Con Edison Astoria, NYC (1993) · BP Newark, NJ (1984)",
-  },
-  {
-    lat: 26.5, lng: -78.7,
-    label: "Freeport, Grand Bahama",
-    count: 1,
-    detail: "Burmah Oil — sea water offshore pipeline (1980)",
-  },
-  {
-    lat: 8.5, lng: -78.5,
-    label: "Northern Peru",
-    count: 10,
-    detail: "Eten, Salaverry, Chimbote, Supe, Callao — multiple offshore/onshore pipelines (2007–2013)",
-  },
-  {
-    lat: 17.5, lng: -71.5,
-    label: "Southern Peru & Chile",
-    count: 5,
-    detail: "Mollendo & Ilo, Peru · Arica, Chile — crude oil pipelines (2007–2012)",
-  },
+  { lat: 70.2,  lng: -148.3, label: "Prudhoe Bay, AK",         count: 1,  detail: "Arco Alaska — 3-phase oil/gas/water pipeline (1982)" },
+  { lat: 54.5,  lng: -114.5, label: "Alberta, Canada",          count: 8,  detail: "Drayton Valley, Legal, Pembina, Rimby, Joarcam, Swan Hills, Braemar (1971–1984)" },
+  { lat: 50.0,  lng: -104.5, label: "Saskatchewan, Canada",     count: 3,  detail: "Estevan, Weyburn, Parkman (1971–1984)" },
+  { lat: 46.9,  lng: -102.8, label: "Dickinson, ND",            count: 6,  detail: "Multiple Conoco 3-phase oil/gas/water pipelines (1978–1982)" },
+  { lat: 37.2,  lng: -109.2, label: "Aneth, UT",                count: 4,  detail: "Superior Oil & Texaco — multiple projects (1973–1981)" },
+  { lat: 35.0,  lng: -119.5, label: "California",               count: 4,  detail: "Santa Barbara (1982), Bakersfield (2005), and other locations (1976–2005)" },
+  { lat: 32.7,  lng: -103.1, label: "Hobbs, NM",                count: 1,  detail: "Shell Oil — produced water pipeline (1981)" },
+  { lat: 32.4,  lng: -117.1, label: "Rosarito, Mexico",         count: 1,  detail: "PEMEX — fuel oil offshore pipeline (2004)" },
+  { lat: 31.5,  lng: -102.3, label: "Odessa, TX",               count: 3,  detail: "Shell Oil — multiple fresh/salt water pipelines (1980–1981)" },
+  { lat: 29.5,  lng: -97.2,  label: "South Texas",              count: 4,  detail: "San Antonio (1984), Corpus Christi (1981), Houston (1980), Texas City (1984)" },
+  { lat: 40.7,  lng: -74.1,  label: "New York Metro",           count: 3,  detail: "Con Edison East River, NYC (1997) · Con Edison Astoria, NYC (1993) · BP Newark, NJ (1984)" },
+  { lat: 26.5,  lng: -78.7,  label: "Freeport, Grand Bahama",   count: 1,  detail: "Burmah Oil — sea water offshore pipeline (1980)" },
+  { lat: 8.5,   lng: -78.5,  label: "Northern Peru",            count: 10, detail: "Eten, Salaverry, Chimbote, Supe, Callao — multiple pipelines (2007–2013)" },
+  { lat: 17.5,  lng: -71.5,  label: "Southern Peru & Chile",    count: 5,  detail: "Mollendo & Ilo, Peru · Arica, Chile — crude oil pipelines (2007–2012)" },
 ]
 
 export default function HistoryMap() {
-  const mapRef = useRef<HTMLDivElement>(null)
-  const mapInstanceRef = useRef<any>(null)
+  // mapRef: typed as null initially so React can attach the DOM node
+  const mapRef = useRef<HTMLDivElement | null>(null)
+  // leafletMap: plain mutable object — avoids useRef overload ambiguity in React 19
+  const leafletMap = useRef<{ remove: () => void } | null>(null)
 
   useEffect(() => {
-    if (mapInstanceRef.current || !mapRef.current) return
+    if (leafletMap.current !== null || mapRef.current === null) return
 
-    function initMap() {
-      if (!mapRef.current || mapInstanceRef.current) return
-      const L = (window as any).L
+    function initMap(): void {
+      const el = mapRef.current
+      if (el === null || leafletMap.current !== null) return
 
-      const map = L.map(mapRef.current, {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const L = (window as any).L as any
+      if (!L) return
+
+      const map = L.map(el, {
         center: [32, -90],
         zoom: 3,
         scrollWheelZoom: false,
         zoomControl: true,
       })
 
-      // CartoDB light tiles — clean look, no API key needed
       L.tileLayer(
         "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
         {
           attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+            "&copy; OpenStreetMap contributors &copy; CARTO",
           subdomains: "abcd",
           maxZoom: 19,
         }
       ).addTo(map)
 
-      const markers: any[] = []
+      const markers: unknown[] = []
 
-      LOCATIONS.forEach((loc: MapPin) => {
-        const isMultiple = loc.count > 1
+      LOCATIONS.forEach((pin) => {
+        const multi = pin.count > 1
 
-        const iconHtml = isMultiple
-          ? `<div style="
-              background:#0f1e35;
-              border:2.5px solid #facc15;
-              border-radius:50%;
-              width:30px;height:30px;
-              display:flex;align-items:center;justify-content:center;
-              font-size:13px;font-weight:700;
-              color:#facc15;
-              font-family:system-ui,sans-serif;
-              box-shadow:0 2px 8px rgba(0,0,0,0.45);
-              cursor:pointer;
-            ">${loc.count}</div>`
-          : `<div style="
-              background:#0f1e35;
-              border:2.5px solid #facc15;
-              border-radius:50%;
-              width:14px;height:14px;
-              box-shadow:0 2px 6px rgba(0,0,0,0.4);
-              cursor:pointer;
-            "></div>`
+        const iconHtml = multi
+          ? `<div style="background:#0f1e35;border:2.5px solid #facc15;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#facc15;font-family:system-ui,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.45);cursor:pointer">${pin.count}</div>`
+          : `<div style="background:#0f1e35;border:2.5px solid #facc15;border-radius:50%;width:14px;height:14px;box-shadow:0 2px 6px rgba(0,0,0,.4);cursor:pointer"></div>`
 
         const icon = L.divIcon({
           html: iconHtml,
           className: "",
-          iconSize: isMultiple ? [30, 30] : [14, 14],
-          iconAnchor: isMultiple ? [15, 15] : [7, 7],
-          popupAnchor: [0, isMultiple ? -18 : -10],
+          iconSize: multi ? [30, 30] : [14, 14],
+          iconAnchor: multi ? [15, 15] : [7, 7],
+          popupAnchor: [0, multi ? -18 : -10],
         })
 
-        const marker = L.marker([loc.lat, loc.lng], { icon })
-        marker.bindPopup(
-          `<div style="font-family:system-ui,sans-serif;min-width:190px;max-width:260px;">
-            <div style="font-weight:700;font-size:14px;color:#0f1e35;margin-bottom:5px;">${loc.label}</div>
-            ${loc.detail ? `<div style="font-size:12px;color:#555;line-height:1.5;">${loc.detail}</div>` : ""}
-          </div>`,
-          { maxWidth: 280 }
-        )
+        const popupHtml =
+          `<div style="font-family:system-ui,sans-serif;min-width:190px;max-width:260px">` +
+          `<div style="font-weight:700;font-size:14px;color:#0f1e35;margin-bottom:5px">${pin.label}</div>` +
+          (pin.detail ? `<div style="font-size:12px;color:#555;line-height:1.5">${pin.detail}</div>` : "") +
+          `</div>`
+
+        const marker = L.marker([pin.lat, pin.lng], { icon })
+        marker.bindPopup(popupHtml, { maxWidth: 280 })
         marker.addTo(map)
         markers.push(marker)
       })
 
-      // Auto-fit to all markers
       const group = L.featureGroup(markers)
       map.fitBounds(group.getBounds().pad(0.12))
 
-      mapInstanceRef.current = map
+      leafletMap.current = map as { remove: () => void }
     }
 
-    // Load Leaflet CSS if not already present
+    // Inject Leaflet CSS once
     if (!document.getElementById("leaflet-css")) {
       const link = document.createElement("link")
       link.id = "leaflet-css"
@@ -189,21 +105,24 @@ export default function HistoryMap() {
       document.head.appendChild(link)
     }
 
-    // Load Leaflet JS if not already present
+    // Inject Leaflet JS once, then init
+    const existingScript = document.getElementById("leaflet-js")
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if ((window as any).L) {
       initMap()
-    } else if (!document.getElementById("leaflet-js")) {
+    } else if (!existingScript) {
       const script = document.createElement("script")
       script.id = "leaflet-js"
       script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      script.onload = () => initMap()
+      script.addEventListener("load", () => { initMap() })
       document.head.appendChild(script)
     }
 
     return () => {
-      if (mapInstanceRef.current) {
-        mapInstanceRef.current.remove()
-        mapInstanceRef.current = null
+      const m = leafletMap.current
+      if (m !== null) {
+        m.remove()
+        leafletMap.current = null
       }
     }
   }, [])

@@ -1,11 +1,10 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
-import dynamic from "next/dynamic"
 import { ArrowLeft, Phone, Mail, MapPin } from "lucide-react"
 import CollapsibleProjectHistory from "../../components/CollapsibleProjectHistory"
-
-// Load map client-side only (Leaflet requires browser APIs)
-const HistoryMap = dynamic(() => import("../../components/HistoryMap"), { ssr: false })
+import HistoryMap from "../../components/HistoryMap"
 
 export default function HistoryV2() {
   const timelineEntries = [
