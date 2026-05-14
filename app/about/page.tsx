@@ -63,7 +63,7 @@ export default function AboutUs() {
               </div>
               <div className="relative h-64 md:h-full rounded-lg overflow-hidden bg-gray-200">
                 <Image
-                  src="/images/about-us-hero.jpg"
+                  src="/images/our-company.jpeg"
                   alt="Pipe-in-Pipe Technologies"
                   fill
                   className="object-cover"
