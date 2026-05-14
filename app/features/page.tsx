@@ -78,30 +78,39 @@ export default function Features() {
           <div className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Specialized Features</h2>
 
-            <div className="mb-8">
+            <div className="mb-16">
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Collar Coupling</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="md:col-span-2">
-                  <p className="text-gray-600 mb-4">
-                    New IT piping systems incorporate a patented coupling device, the Collar, enabling simultaneous
-                    welding of the steel and fiberglass components for a robust joint. This innovative coupling
-                    technology ensures:
-                  </p>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2 mb-4">
-                    <li>Leak-free connections between pipe sections</li>
-                    <li>Maintenance of the three-phase integrity throughout the pipeline</li>
-                    <li>Simplified installation and joining process</li>
-                    <li>Enhanced structural integrity at connection points</li>
-                  </ul>
-                </div>
-                <div className="relative h-48 md:h-auto rounded-lg overflow-hidden bg-gray-200">
-                  <Image
-                    src="/placeholder.svg?height=300&width=300"
-                    alt="Collar Coupling Technology"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+              <p className="text-gray-600 mb-4">
+                New IT piping systems incorporate a patented coupling device, the Collar, enabling simultaneous
+                welding of the steel and fiberglass components for a robust joint. This innovative coupling
+                technology ensures:
+              </p>
+              <ul className="list-disc list-inside text-gray-600 space-y-2 mb-8">
+                <li>Leak-free connections between pipe sections</li>
+                <li>Maintenance of the three-phase integrity throughout the pipeline</li>
+                <li>Simplified installation and joining process</li>
+                <li>Enhanced structural integrity at connection points</li>
+              </ul>
+
+              {/* 4-photo gallery */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                {[
+                  { src: "/images/Collar1.JPG",   caption: "Epoxy application" },
+                  { src: "/images/Collar2.jpg",   caption: "Epoxy application complete" },
+                  { src: "/images/Collar3.jpeg",  caption: "Collar inset for joining" },
+                  { src: "/images/Collar4.jpg",   caption: "Final weld" },
+                ].map((photo, i) => (
+                  <div key={i}>
+                    <div className="h-64 rounded-lg overflow-hidden shadow-md">
+                      <img
+                        src={photo.src}
+                        alt={photo.caption}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-sm text-gray-600 font-medium text-center mt-2">{photo.caption}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
