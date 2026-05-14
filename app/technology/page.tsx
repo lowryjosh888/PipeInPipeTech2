@@ -43,6 +43,25 @@ export default function Technology() {
               objective in this superior piping application is the implementation in virtually all pipe line
               configurations where reducing, neutralizing and eliminating internal corrosion is imminent.
             </p>
+
+            {/* Two photos between paragraphs */}
+            <div className="flex gap-3 mb-4 w-full">
+              <div className="flex-1 overflow-hidden rounded-lg" style={{ height: 280 }}>
+                <img
+                  src="/images/IT3-System1.png"
+                  alt="IT3 System"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex-1 overflow-hidden rounded-lg" style={{ height: 280 }}>
+                <img
+                  src="/images/IT3-System2.jpeg"
+                  alt="IT3 System"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
             <p className="text-gray-800">
               The trade name IT3 short for Internal Tube 3-Phase reflects the three distinct material layers integrated
               into its design. This innovative multiwall piping system, originally patented by Ken Tierling over 50
