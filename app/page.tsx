@@ -198,6 +198,10 @@ function ServicesGrid() {
     {
       title: "In-Situ Pipe Rehabilitation",
       photo: "/images/In-Situ-Pipe-Rehabilitation2.jpg",
+      photos: [
+        "/images/In-Situ-Pipe-Rehabilitation2.jpg",
+        "/images/In-Situ-Pipe-Rehabilitation3.JPG",
+      ],
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
