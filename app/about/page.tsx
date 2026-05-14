@@ -9,7 +9,7 @@ export default function AboutUs() {
       <div
         className="relative w-full h-72 md:h-96 flex items-end"
         style={{
-          backgroundImage: "url('/images/about-us-hero.jpg')",
+          backgroundImage: "url('/images/offshore-pipeline-installation.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -63,8 +63,8 @@ export default function AboutUs() {
               </div>
               <div className="relative h-64 md:h-full rounded-lg overflow-hidden bg-gray-200">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2375.JPG-zYGEsfuiFtbcsU0HXtPctMeTh6gu5z.jpeg"
-                  alt="Pipe-in-Pipe Technologies offshore pipeline installation"
+                  src="/images/about-us-hero.jpg"
+                  alt="Pipe-in-Pipe Technologies"
                   fill
                   className="object-cover"
                 />
