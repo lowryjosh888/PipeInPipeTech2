@@ -128,7 +128,7 @@ export default function Technology() {
           </div>
 
           {/* Technical Example */}
-          <div className="border-t border-gray-200 pt-8 mb-8">
+          <div id="technical-example" className="border-t border-gray-200 pt-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Technical Example</h2>
             <p className="text-gray-800 mb-6">
               By intentionally disregarding the compressive effect of the cement on the inner liner during its set, a

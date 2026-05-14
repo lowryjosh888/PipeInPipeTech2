@@ -166,7 +166,7 @@ export default function Features() {
                   <div className="h-64 rounded-lg overflow-hidden shadow-md">
                     <img src="/images/pipe-centralizer1.jpg" alt="Centralizer device in-situ" className="w-full h-full object-cover" />
                   </div>
-                  <p className="text-sm text-gray-600 font-medium text-center mt-2">Centralizer device in-situ</p>
+                  <p className="text-sm text-gray-600 font-medium text-center mt-2">Centralizer device</p>
                 </div>
                 <div>
                   <div className="h-64 rounded-lg overflow-hidden shadow-md">
@@ -180,8 +180,11 @@ export default function Features() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                 <div>
                   <p className="text-gray-600 mb-4">
-                    Moreover, the cement thickness affects the stress state of the plastic liner very little. Reviewing
-                    the former example, it was found that, with uniform cement thickness of .75", the P.V.C. bears a
+                    Moreover, the cement thickness affects the stress state of the plastic liner very little. Revisiting{" "}
+                    <a href="/technology#technical-example" style={{ color: "#f4c430" }} className="hover:underline">
+                      the example
+                    </a>{" "}
+                    from the technology page, it was found that, with uniform cement thickness of .75", the P.V.C. bears a
                     stress of 160 psi, which is well below its tensile critical stress of 2,600 psi.
                   </p>
                   <p className="text-gray-600">
