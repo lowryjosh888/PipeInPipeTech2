@@ -3,8 +3,36 @@ import { MapPin, Phone, Mail, Globe, Award, Target } from "lucide-react"
 
 export default function AboutUs() {
   return (
-    <div className="min-h-screen w-full bg-gray-100 py-12 pt-32">
-      <div className="w-full px-4">
+    <div className="min-h-screen w-full bg-gray-100">
+
+      {/* ── Hero Banner ── */}
+      <div
+        className="relative w-full h-72 md:h-96 flex items-end"
+        style={{
+          backgroundImage: "url('/images/about-us-hero.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">About Us</h1>
+        </div>
+      </div>
+
+      {/* ── Stats Bar ── */}
+      <div className="w-full bg-white border-b border-gray-200 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          {["54+ Years of Innovation", "65+ Projects", "North & South America", "Vacuum to 3500 PSI"].map((stat, i, arr) => (
+            <div key={stat} className="flex items-center gap-6">
+              <span className="text-sm font-semibold tracking-wide" style={{ color: "#0f1e35" }}>{stat}</span>
+              {i < arr.length - 1 && <span className="text-gray-300 font-light select-none">|</span>}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full px-4 py-12">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">About Pipe-in-Pipe Technologies</h1>
         </div>
@@ -47,8 +75,8 @@ export default function AboutUs() {
           {/* CEO Section */}
           <div className="border-t border-gray-200 pt-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Brian Ohlendorff – CEO</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="md:col-span-1">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="md:col-span-1 flex flex-col items-start">
                 <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-200 mb-4" style={{ width: "60%" }}>
                   <Image
                     src="/images/BrianOhlendorff.png"
@@ -116,7 +144,7 @@ export default function AboutUs() {
           {/* Company Facts */}
           <div className="border-t border-gray-200 pt-8">
             <h3 className="text-xl font-semibold text-gray-800 mb-6">Company Facts</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-yellow-400 p-4 rounded-lg text-center shadow-md">
                 <p className="text-3xl font-bold text-black mb-2">50+</p>
                 <p className="text-black">Combined Years of Experience</p>
@@ -128,10 +156,6 @@ export default function AboutUs() {
               <div className="bg-yellow-400 p-4 rounded-lg text-center shadow-md">
                 <p className="text-3xl font-bold text-black mb-2">12</p>
                 <p className="text-black">Regions Served</p>
-              </div>
-              <div className="bg-yellow-400 p-4 rounded-lg text-center shadow-md">
-                <p className="text-3xl font-bold text-black mb-2">100%</p>
-                <p className="text-black">Client Satisfaction</p>
               </div>
             </div>
           </div>
