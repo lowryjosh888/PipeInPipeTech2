@@ -1,19 +1,21 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, Phone, Mail, MapPin } from "lucide-react"
 import CollapsibleProjectHistory from "../../components/CollapsibleProjectHistory"
+import HistoryMap from "../../components/HistoryMap"
 
-export default function History() {
+export default function HistoryV2() {
   const timelineEntries = [
-    { era: "1960s", text: "Mr. Tierling serves as district manager for Magna Chem. Ltd. in Alberta, Canada" },
+    { era: "1960s",     text: "Mr. Tierling serves as district manager for Magna Chem. Ltd. in Alberta, Canada" },
     { era: "Late 1960s", text: "Mr. Tierling meets engineer Bennant Fruck, beginning their collaboration" },
-    { era: "1968", text: "Tierling & Fruck begin dedicated engineering, development, and installation of the patented IT3 multiwall system" },
-    { era: "1971", text: "First IT3 System successfully installed" },
-    { era: "1973", text: "Ken Tierling relocates and incorporates in Conroe, Texas" },
+    { era: "1968",      text: "Tierling & Fruck begin dedicated engineering, development, and installation of the patented IT3 multiwall system" },
+    { era: "1971",      text: "First IT3 System successfully installed" },
     { era: "1970s–80s", text: "Expansion of IT3 System applications across multiple industries" },
     { era: "1980s–90s", text: "International expansion with installations in South America and the Caribbean" },
     { era: "2000s–10s", text: "Continued growth with major projects in Peru, Chile, and other locations" },
-    { era: "Present", text: "IT3 Systems continue to operate successfully in diverse environments worldwide" },
+    { era: "Present",   text: "IT3 Systems continue to operate successfully in diverse environments worldwide" },
   ]
 
   const installations = [
@@ -30,7 +32,7 @@ export default function History() {
   return (
     <div className="min-h-screen w-full bg-gray-100">
 
-      {/* ── Step 1: Hero Banner ── */}
+      {/* ── Hero Banner ── */}
       <div
         className="relative w-full h-72 md:h-96 flex items-end"
         style={{
@@ -57,166 +59,88 @@ export default function History() {
 
         <div className="bg-white rounded-lg shadow-xl p-8 max-w-7xl mx-auto mb-12">
 
-          {/* Ken Tierling section */}
+          {/* ── Founder Section: photo left, paragraph 1 right ── */}
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">The Founder of IT3: Ken Tierling's Story</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">The Founder of IT3: Ken Tierling's Story</h2>
+            <div className="w-16 h-1 bg-yellow-400 mb-6 rounded-full" />
 
-            {/* ── Step 2: Ken Tierling photo with dark navy background and caption ── */}
-            <div className="rounded-xl overflow-hidden mb-6" style={{ background: "#0f1e35" }}>
-              <div className="relative h-72 md:h-96">
-                <Image
-                  src="/images/KenTierling.png"
-                  alt="Ken Tierling, founder of the IT3 System"
-                  fill
-                  className="object-contain"
-                />
+            <div className="flex gap-8 items-start">
+              {/* Photo — 30% larger than previous (235→305, 285→370) */}
+              <div className="flex-shrink-0" style={{ width: 305 }}>
+                <div className="rounded-lg overflow-hidden border-4 border-gray-200 shadow-md">
+                  <Image
+                    src="/images/KenTierling.png"
+                    alt="Ken Tierling, founder of the IT3 System"
+                    width={305}
+                    height={370}
+                    className="object-cover object-top w-full"
+                  />
+                </div>
+                <p className="text-center text-gray-500 text-xs mt-2 px-2 leading-snug">
+                  Ken Tierling
+                </p>
               </div>
-              <p className="text-center text-gray-400 text-sm py-3 px-4">
-                Ken Tierling — founder of the IT3 Multiwall Piping System, patented over 50 years ago
-              </p>
-            </div>
 
-            {/* ── Step 3: body text gray-800 ── */}
-            <p className="text-gray-800 mb-4">
-              In the mid 60's Mr. Tierling served as the district manager for Magna Chem. Ltd. in Alberta, Canada which
-              would dispense chemical solutions to try and neutralize pipeline corrosion issues. Realizing that pipe
-              line corrosion was becoming difficult to manage and grave concern, Mr. Tierling coincidently met Bennant
-              Fruck an engineer in the same field. Together they teamed and developed a relationship that would change
-              the pipe line industry and thus the IT3 Multiwall Piping System was developed.
-            </p>
-            <p className="text-gray-800 mb-4">
-              In 1971 the first IT3 System was installed and in 1973 Mr. Tierling relocated and incorporated in Conroe,
-              Texas. Throughout the years the necessity in fabricating multiwall piping systems became evident in
-              replacing existing pipelines beyond repair. Mr. Tierling's primary focus was designing and building
-              multiwall pipe line systems that contain / eliminate corrosion complications that meet or exceed double
-              wall containment requirements. His vision was that the IT3 System would not only be segmented to one
-              industry but to be universal in all fields including oil, gas, chemical, mining, power utility and all
-              municipal entities.
-            </p>
-            <p className="text-gray-800">
-              Mr. Tierling has successfully implemented the IT3 System in both onshore and offshore environments, across
-              a wide range of fluid streams and multiphase systems. The IT3 System remains fully intact and operational
-              to this day, demonstrating long-term performance in diverse climates throughout North and South America,
-              as well as the Caribbean.
-            </p>
-          </div>
-
-          {/* About IT3 Multiwall System */}
-          <div className="border-t border-gray-200 pt-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">About IT3 Multiwall System</h3>
-
-            {/* ── Step 6: Pull quote ── */}
-            <blockquote className="border-l-4 border-yellow-400 bg-gray-50 px-6 py-4 my-6 rounded-r-lg">
-              <p className="text-gray-700 text-lg italic leading-relaxed">
-                "Since 1968, dedicated to engineering solutions that eliminate galvanic corrosion — meeting
-                the double-wall containment requirements of petroleum, mining, and power line industries."
-              </p>
-            </blockquote>
-
-            <p className="text-gray-800 mb-4">
-              Since 1968, Mr. Tierling has been dedicated to the engineering, development, and installation of its
-              patented multiwall system, IT3, which eliminates galvanic corrosion problems and meets the necessary
-              requirements of the petroleum, mining, and power line industries regarding double-wall containment.
-            </p>
-            <p className="text-gray-800 mb-4">
-              The IT3 Multiwall Piping System has been installed in numerous climates and terrains across the American
-              continent, including the North Slope of Alaska, the streets of New York City, the Bahamas, California, and
-              Peru, among others. The system operates with all types of fluids such as crude oil, oil, gas, water,
-              slurry, and multi-phase systems with pressures ranging from vacuum to 3500 PSI. Additionally, the PPT IT3
-              system has developed projects in areas where endangered species are found, thus ensuring the system's
-              ability to protect the environment.
-            </p>
-          </div>
-
-          {/* IT3 Technology section */}
-          <div className="border-t border-gray-200 pt-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">The IT3 Multiwall System Technology</h3>
-            <p className="text-gray-800 mb-4">
-              PPT's design focused on the proposed fusion of three materials (IT3), sliding a corrosion-resistant lining
-              inside a stronger metal tube; thus providing a material option that contains chemical and mechanical
-              properties resistant to corrosion.
-            </p>
-            <p className="text-gray-800 mb-4">
-              The important art and science of the procedure consists of controlling the flow characteristics and
-              properties of a non-Newtonian fluid, the cement slurry, to ensure complete continuity of the stress
-              transfer mechanism. Our patented techniques, based on decades of experience, are the only ones known to
-              make a very high success rate.
-            </p>
-            <p className="text-gray-800 mb-4">
-              PPT engineers determine the selection of the internal lining material (fiberglass reinforced plastic,
-              polyethylene, polybutylene, ceramics, PVC, etc.). These are chosen for their high corrosion resistance and
-              excellent flow characteristics. The coating must also adapt to present and future operational demands.
-            </p>
-            <p className="text-gray-800 mb-4">
-              The cement slurry, its design and mixture is exclusive to the IT3 system. The cement injected into the
-              annular space confines the lining, managing to join the lining with the outer tube.
-            </p>
-          </div>
-
-          {/* ── Step 4: Visual vertical timeline ── */}
-          <div className="border-t border-gray-200 pt-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-8">Evolution of the IT3 System</h3>
-            <div className="relative">
-              {/* Vertical yellow line */}
-              <div
-                className="absolute left-16 top-0 bottom-0 w-0.5"
-                style={{ background: "linear-gradient(to bottom, #facc15, #facc15 90%, transparent)" }}
-              />
-              <div className="space-y-6">
-                {timelineEntries.map((entry, i) => (
-                  <div key={i} className="flex items-start gap-6">
-                    {/* Date badge */}
-                    <div
-                      className="flex-shrink-0 w-32 text-right pr-4 relative"
-                    >
-                      <span
-                        className="inline-block text-xs font-bold text-yellow-400 px-2 py-1 rounded"
-                        style={{ background: "#0f1e35" }}
-                      >
-                        {entry.era}
-                      </span>
-                      {/* Dot on the line */}
-                      <span
-                        className="absolute right-[-5px] top-2 w-3 h-3 rounded-full border-2 border-yellow-400"
-                        style={{ background: "#0f1e35" }}
-                      />
-                    </div>
-                    {/* Entry text */}
-                    <div className="flex-grow pt-0.5 pb-2">
-                      <p className="text-gray-800">{entry.text}</p>
-                    </div>
-                  </div>
-                ))}
+              {/* Two paragraphs beside the photo */}
+              <div className="flex-1 min-w-0">
+                <p className="text-gray-800 mb-4">
+                  In the mid 60's Mr. Tierling served as the district manager for Magna Chem. Ltd. in Alberta, Canada
+                  which would dispense chemical solutions to try and neutralize pipeline corrosion issues. Realizing that
+                  pipe line corrosion was becoming difficult to manage and grave concern, Mr. Tierling coincidently met
+                  Bennant Fruck an engineer in the same field.
+                </p>
+                <p className="text-gray-800">
+                  Together they teamed and developed the IT3 Multiwall Piping System which would contain or eliminate
+                  corrosion complications while still meeting or exceeding double wall containment requirements. The design
+                  focused on the proposed fusion of three materials (IT3), sliding a corrosion-resistant lining inside a
+                  stronger metal tube; thus providing a material option that contains chemical and mechanical properties
+                  resistant to corrosion.
+                  <br /><br />
+                  The design was a success and the first installation took place in 1971 in
+                  Alberta, Canada.
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Complete Project History (collapsible) */}
-          <CollapsibleProjectHistory />
-
-          {/* Global Implementation */}
+          {/* ── Global Reach: paragraph 2 left, map right ── */}
           <div className="border-t border-gray-200 pt-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Global Implementation</h3>
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Global Reach</h3>
+            <div className="w-16 h-1 bg-yellow-400 mb-6 rounded-full" />
+            <div className="flex gap-8 items-start">
+              {/* Paragraph 2 on the left */}
+              <div className="flex-1 min-w-0">
+                <p className="text-gray-800">
+                  Since that time the IT3 System has been installed in both onshore and offshore environments, in a wide
+                  range of fluid streams and multiphase systems, and in numerous climates and terrains across the American
+                  continent, including the North Slope of Alaska, the streets of New York City, the Bahamas, California,
+                  and Peru, among others.
+                  <br /><br />
+                  The system operates with all types of fluids such as crude oil, oil, gas, water,
+                  slurry, and multi-phase systems with pressures ranging from vacuum to 3500 PSI. Additionally, the PPT
+                  IT3 system has developed projects in areas where endangered species are found, thus ensuring the
+                  system's ability to protect the environment. This remarkable versatility has made it the preferred
+                  solution across multiple industries, including oil, gas, chemical, mining, power utility, and municipal
+                  infrastructure.
+                  <br /><br />
+                  To date, pipelines constructed using the IT3 System continue to operate with sustained
+                  integrity and no signs of degradation over time, enabling operations to be carried out with confidence,
+                  safety, and efficiency.
+                </p>
+              </div>
 
-            <blockquote className="border-l-4 border-yellow-400 bg-gray-50 px-6 py-4 my-6 rounded-r-lg">
-              <p className="text-gray-700 text-lg italic leading-relaxed">
-                "Over 54 years and 65+ projects across the Americas — every IT3 pipeline constructed to date
-                continues to operate with sustained integrity and no signs of degradation."
-              </p>
-            </blockquote>
+              {/* Map on the right — isolation:isolate scopes Leaflet's z-indices (200–700) within this stacking context */}
+              <div className="flex-1 min-w-0" style={{ isolation: "isolate" }}>
+                <HistoryMap />
+              </div>
+            </div>
+          </div>
 
-            <p className="text-gray-800 mb-6">
-              Over the past 54+ years in the hydrocarbon industry (Oil &amp; Gas), the IT3 Multiwall System has been
-              effectively engineered and applied in over 65 projects throughout the Americas — including North, Central,
-              and South America, as well as the Caribbean. To date, pipelines constructed using the IT3 System continue
-              to operate with sustained integrity and no signs of degradation over time, enabling operations to be
-              carried out with confidence, safety, and efficiency.
-            </p>
-
-            <p className="text-gray-800 font-medium mb-4">Notable installations include:</p>
-
-            {/* ── Step 5: Location cards ── */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+          {/* ── Notable Installations ── */}
+          <div className="border-t border-gray-200 pt-8 mb-8">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Notable Installations</h3>
+            <div className="w-16 h-1 bg-yellow-400 mb-6 rounded-full" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {installations.map((loc, i) => (
                 <div
                   key={i}
@@ -228,14 +152,45 @@ export default function History() {
                 </div>
               ))}
             </div>
-
-            <p className="text-gray-800">
-              The IT3 System has been successfully implemented in various applications, handling fluid streams and
-              multiphase systems with pressures ranging from vacuum to 3500 psi. This remarkable versatility has made it
-              the preferred solution across multiple industries, including oil, gas, chemical, mining, power utility,
-              and municipal infrastructure.
-            </p>
           </div>
+
+          {/* ── Complete Project History (collapsible) ── */}
+          <CollapsibleProjectHistory />
+
+          {/* ── Evolution Timeline (at bottom) ── */}
+          <div className="border-t border-gray-200 pt-8 mb-8">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">Evolution of the IT3 System</h3>
+            <div className="w-16 h-1 bg-yellow-400 mb-8 rounded-full" />
+            <div className="relative">
+              {/* Vertical yellow line */}
+              <div
+                className="absolute left-16 top-0 bottom-0 w-0.5"
+                style={{ background: "linear-gradient(to bottom, #facc15, #facc15 90%, transparent)" }}
+              />
+              <div className="space-y-6">
+                {timelineEntries.map((entry, i) => (
+                  <div key={i} className="flex items-start gap-6">
+                    <div className="flex-shrink-0 w-32 text-right pr-4 relative">
+                      <span
+                        className="inline-block text-xs font-bold text-yellow-400 px-2 py-1 rounded"
+                        style={{ background: "#0f1e35" }}
+                      >
+                        {entry.era}
+                      </span>
+                      <span
+                        className="absolute right-[-5px] top-2 w-3 h-3 rounded-full border-2 border-yellow-400"
+                        style={{ background: "#0f1e35" }}
+                      />
+                    </div>
+                    <div className="flex-grow pt-0.5 pb-2">
+                      <p className="text-gray-800">{entry.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
         </div>
 
         {/* Contact Section */}
