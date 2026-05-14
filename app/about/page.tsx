@@ -49,7 +49,7 @@ export default function AboutUs() {
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Brian Ohlendorff – CEO</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="md:col-span-1">
-                <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-gray-200 mb-4">
+                <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-200 mb-4" style={{ width: "60%" }}>
                   <Image
                     src="/images/BrianOhlendorff.png"
                     alt="Brian Ohlendorff - CEO"
@@ -70,12 +70,6 @@ export default function AboutUs() {
                   Mr. Ohlendorff is the only individual to obtain the knowledge, skills, technique and implementation of
                   the IT3 multiwall pipeline system through the direct training and supervision of Mr. Tierling.
                 </p>
-                <p className="text-gray-600 mb-2">
-                  One of the most gratifying gestures an individual can ever receive!
-                </p>
-                <blockquote className="border-l-4 border-yellow-400 pl-4 italic text-gray-700 my-4">
-                  "I wish I could find more people like you Brian!" - Ken Tierling
-                </blockquote>
               </div>
             </div>
           </div>
