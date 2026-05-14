@@ -4,13 +4,28 @@ import { ArrowLeft, Settings, Layers, Zap, Wrench, Droplets, Gauge, Phone, Mail,
 
 export default function Features() {
   return (
-    <div className="min-h-screen w-full bg-gray-100 py-12 pt-32">
-      <div className="w-full px-4">
+    <div className="min-h-screen w-full bg-gray-100">
+
+      {/* ── Hero Banner ── */}
+      <div
+        className="relative w-full h-72 md:h-96 flex items-end"
+        style={{
+          backgroundImage: "url('/images/In-Situ-Pipe-Rehabilitation2.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">IT3 System Features</h1>
+        </div>
+      </div>
+
+      <div className="w-full px-4 py-12">
         <div className="max-w-7xl mx-auto">
           <Link href="/" className="inline-flex items-center text-yellow-400 hover:text-yellow-500 mb-8">
             <ArrowLeft className="mr-2" /> Back to Home
           </Link>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">IT3 System Features</h1>
         </div>
 
         {/* ── Key Features — photo background treatment ── */}
