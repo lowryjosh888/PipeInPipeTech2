@@ -13,6 +13,7 @@ interface Service {
   photo: string | null // path relative to /public — e.g. "/images/it3-install.jpg"
   photos?: string[]    // optional array — when present, renders a 3-up photo row instead of single photo
   photoContain?: boolean // true = show full image (object-contain); false/omit = crop to fill (object-cover)
+  firstPhotoStyle?: React.CSSProperties // optional inline style applied only to the first photo in a photos[] row
   expandedContent: React.ReactNode
 }
 
@@ -72,6 +73,7 @@ function ServiceModal({
                   src={src}
                   alt={`${service.title} ${i + 1}`}
                   className="w-full h-full object-cover"
+                  style={i === 0 && service.firstPhotoStyle ? service.firstPhotoStyle : undefined}
                 />
               </div>
             ))}
@@ -202,6 +204,7 @@ function ServicesGrid() {
         "/images/In-Situ-Pipe-Rehabilitation2.jpg",
         "/images/In-Situ-Pipe-Rehabilitation3.JPG",
       ],
+      firstPhotoStyle: { transform: "scale(1.12)", transformOrigin: "center top" },
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
