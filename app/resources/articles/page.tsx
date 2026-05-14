@@ -58,8 +58,15 @@ export default function Articles() {
         </div>
       </div>
 
+      {/* ── Attribution ── */}
+      <div className="w-full px-4" style={{ marginTop: "32px", marginBottom: "40px" }}>
+        <p className="text-center italic text-gray-500 max-w-2xl mx-auto" style={{ fontSize: "14px" }}>
+          All articles reproduced below are sourced from the family of Ken Tierling.
+        </p>
+      </div>
+
       {/* ── Article Grid ── */}
-      <div className="w-full px-4 py-12">
+      <div className="w-full px-4 pb-12">
         <div className="max-w-7xl mx-auto">
 
           {/* 2-col grid; last card centred via the wrapper trick */}
