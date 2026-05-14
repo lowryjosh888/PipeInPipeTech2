@@ -142,20 +142,25 @@ export default function Features() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Centralization Technology</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Centralization Technology</h3>
+
+              {/* Paragraph 1 — opening */}
               <p className="text-gray-600 mb-4">
-                The IT3 System features a unique approach to liner centralization within the outer casing:
+                A critical part of the IT3 process is liner centralization, because the liner must be centralized to
+                maintain effectiveness of the overall IT3 concept.
               </p>
 
-              {/* Paragraph 1 — buoyancy/corrosion */}
+              {/* Paragraph 2 — buoyancy explanation */}
               <p className="text-gray-600 mb-6">
-                Without the use of any centralizers, the plastic liner surrounded by cement slurry with a specific
-                gravity of 1.8 will rise to the top/12:00 position causing a buoyancy effect. This is exceptionally
-                beneficial in rejuvenation applications since the majority of localized corrosion occurs at the bottom
-                of the pipeline.
+                Without centralizers, a buoyancy effect arising from a plastic tube being immersed in a cement slurry
+                (specific gravity 1.8) tends to float the liner upward just after the liner has been grouted in. In
+                regards to rejuvenation applications, however, most of the localized corrosion occurs at the bottom of
+                the pipeline since aqueous media tends to concentrate in this area and also due to the very mechanism of
+                pit propagation. Hence, it very often becomes an advantage to retain a greater thickness of cement grout
+                on the bottom side of the pipeline.
               </p>
 
-              {/* 2-column photo grid */}
+              {/* 2-column photo grid — unchanged */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div>
                   <div className="h-64 rounded-lg overflow-hidden shadow-md">
@@ -171,20 +176,27 @@ export default function Features() {
                 </div>
               </div>
 
-              {/* Paragraph 2 — cement thickness/stress */}
-              <p className="text-gray-600 mb-6">
-                Even with varying grout thickness (e.g., 0.3" at the top and 1.2" at the bottom), stress on the
-                plastic liner varies insignificantly. With most standard in-situ rejuvenations, it is preferred to
-                avoid the use of centralizers, though in other intricate situations, centralizing techniques have been
-                and will be used.
-              </p>
-
-              {/* Single centered diagram */}
-              <div className="mb-8">
-                <div className="max-w-md mx-auto rounded-lg overflow-hidden shadow-md">
-                  <img src="/images/centralizing.png" alt="Varying grout thickness diagram" className="w-full h-auto" />
+              {/* Two-column: paragraphs 3+4 left, diagram right */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div>
+                  <p className="text-gray-600 mb-4">
+                    Moreover, the cement thickness affects the stress state of the plastic liner very little. Reviewing
+                    the former example, it was found that, with uniform cement thickness of .75", the P.V.C. bears a
+                    stress of 160 psi, which is well below its tensile critical stress of 2,600 psi.
+                  </p>
+                  <p className="text-gray-600">
+                    Even with varying grout thickness (e.g., 0.3" at the top and 1.2" at the bottom), stress on the
+                    plastic liner varies insignificantly. With most standard in-situ rejuvenations, it is preferred to
+                    avoid the use of centralizers, though in other intricate situations, centralizing techniques have
+                    been and will be used.
+                  </p>
                 </div>
-                <p className="text-sm text-gray-600 font-medium text-center mt-2">Varying grout thickness: .3" at top, 1.2" at bottom</p>
+                <div>
+                  <div className="max-w-sm mx-auto rounded-lg overflow-hidden shadow-md">
+                    <img src="/images/centralizing.png" alt="Varying grout thickness diagram" className="w-full h-auto" />
+                  </div>
+                  <p className="text-sm text-gray-600 font-medium text-center mt-2">Varying grout thickness: .3" at top, 1.2" at bottom</p>
+                </div>
               </div>
             </div>
           </div>
