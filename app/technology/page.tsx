@@ -156,12 +156,12 @@ export default function Technology() {
                 Liner Performance
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-xl p-6 text-center" style={{ background: "#1e3a5f" }}>
+                <div className="rounded-xl p-6 text-center" style={{ background: "#0f1e35" }}>
                   <div className="text-4xl font-extrabold text-yellow-400 leading-none mb-1">160</div>
                   <div className="text-gray-400 uppercase tracking-wide mt-1" style={{ fontSize: "11px" }}>PSI</div>
                   <div className="text-white mt-2" style={{ fontSize: "13px" }}>Tangential Stress in P.V.C.</div>
                 </div>
-                <div className="rounded-xl p-6 text-center" style={{ background: "#1e3a5f" }}>
+                <div className="rounded-xl p-6 text-center" style={{ background: "#0f1e35" }}>
                   <div className="text-4xl font-extrabold text-yellow-400 leading-none mb-1">2,600</div>
                   <div className="text-gray-400 uppercase tracking-wide mt-1" style={{ fontSize: "11px" }}>PSI</div>
                   <div className="text-white mt-2" style={{ fontSize: "13px" }}>Plastic Limit of P.V.C.</div>
@@ -178,7 +178,7 @@ export default function Technology() {
                 Steel Stress Comparison
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-xl p-6 text-center" style={{ background: "#1e3a5f" }}>
+                <div className="rounded-xl p-6 text-center" style={{ background: "#0f1e35" }}>
                   <div className="font-extrabold text-yellow-400 leading-none mb-1" style={{ fontSize: "40px", color: "#f4c430" }}>11,475</div>
                   <div className="text-gray-400 mt-1" style={{ fontSize: "11px" }}>PSI</div>
                   <div className="text-white mt-2" style={{ fontSize: "13px" }}>Tangential Stress in Steel</div>
