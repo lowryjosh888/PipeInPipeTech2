@@ -27,7 +27,7 @@ export default function Brochure() {
 
           {/* Intro text */}
           <p className="text-gray-600 mb-12" style={{ fontSize: "17px", lineHeight: "1.7" }}>
-            Download our comprehensive technical brochure to learn more about the IT3 Multiwall System,
+            View or download our comprehensive technical brochure to learn more about the IT3 Multiwall System,
             installation methods, applications, and project experience.
           </p>
 
