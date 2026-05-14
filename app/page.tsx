@@ -300,7 +300,7 @@ function ServicesGrid() {
     },
     {
       title: "Custom Engineering Solutions",
-      photo: "/images/Custom-Engineering-Solutions.jpeg",
+      photo: "/images/custom-engineering-solutions2.JPG",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -334,7 +334,7 @@ function ServicesGrid() {
             {[
               "High-temperature applications (up to 350°F)",
               "Highly corrosive environments",
-              "High-pressure systems (up to 3500 psi)",
+              "High-pressure systems (3500+ psi)",
               "Unusual pipe geometries and configurations",
             ].map((item) => (
               <li key={item} className="flex items-start gap-2 text-gray-300">
