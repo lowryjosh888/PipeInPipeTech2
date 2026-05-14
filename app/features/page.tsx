@@ -214,31 +214,20 @@ export default function Features() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: "Oil & Gas Pipelines",     body: "For crude oil, refined products, and natural gas transport with corrosion protection",         photo: "/images/Pipeline-Assessment.JPG" },
-                { title: "Chemical Processing",      body: "For handling corrosive chemicals and preventing contamination",                                photo: "/images/Environmental-Sustainability2.jpeg" },
-                { title: "Mining Operations",        body: "For slurry transport and acid-resistant applications",                                        photo: "/images/insertion.JPG" },
-                { title: "Municipal Infrastructure", body: "For water and wastewater systems with extended service life",                                 photo: "/images/Maintenance-Programs3.jpg" },
-                { title: "Submarine Pipelines",      body: "With enhanced stability and corrosion resistance in marine environments",                     photo: "/images/offshore-pipeline-installation.png" },
-                { title: "Power Utilities",          body: "For cooling water systems and process piping with thermal insulation",                        photo: "/images/system-installation1.jpeg" },
+                { title: "Oil & Gas Pipelines",     body: "For crude oil, refined products, and natural gas transport with corrosion protection" },
+                { title: "Chemical Processing",      body: "For handling corrosive chemicals and preventing contamination" },
+                { title: "Mining Operations",        body: "For slurry transport and acid-resistant applications" },
+                { title: "Municipal Infrastructure", body: "For water and wastewater systems with extended service life" },
+                { title: "Submarine Pipelines",      body: "With enhanced stability and corrosion resistance in marine environments" },
+                { title: "Power Utilities",          body: "For cooling water systems and process piping with thermal insulation" },
               ].map((card, i) => (
                 <div
                   key={i}
-                  className="relative overflow-hidden rounded-lg"
-                  style={{ borderLeft: "3px solid #f4c430", minHeight: "160px" }}
+                  className="rounded-lg p-6"
+                  style={{ background: "#0f1e35", borderLeft: "3px solid #f4c430", minHeight: "160px" }}
                 >
-                  {/* Background photo */}
-                  <img
-                    src={card.photo}
-                    alt={card.title}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                  {/* Navy overlay ~78% */}
-                  <div className="absolute inset-0" style={{ background: "rgba(15, 30, 53, 0.78)" }} />
-                  {/* Content */}
-                  <div className="relative z-10 p-6">
-                    <h3 className="font-bold text-white mb-2">{card.title}</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">{card.body}</p>
-                  </div>
+                  <h3 className="font-bold text-white mb-2">{card.title}</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">{card.body}</p>
                 </div>
               ))}
             </div>
