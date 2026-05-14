@@ -71,9 +71,23 @@ export default function PipeModel() {
 
   const [selectedLayer, setSelectedLayer] = useState(null)
   const [hoveredLayer, setHoveredLayer] = useState(null)
+  const [webGLError, setWebGLError] = useState(false)
 
   useEffect(() => {
     if (!containerRef.current) return
+
+    // Check WebGL support before initialising Three.js
+    try {
+      const testCanvas = document.createElement("canvas")
+      const gl = testCanvas.getContext("webgl") || testCanvas.getContext("experimental-webgl")
+      if (!gl) {
+        setWebGLError(true)
+        return
+      }
+    } catch {
+      setWebGLError(true)
+      return
+    }
 
     // Scene setup
     const scene = new THREE.Scene()
@@ -91,11 +105,23 @@ export default function PipeModel() {
     cameraRef.current = camera
 
     // Renderer
-    const renderer = new THREE.WebGLRenderer({ antialias: true })
+    let renderer: THREE.WebGLRenderer
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, failIfMajorPerformanceCaveat: false })
+    } catch {
+      setWebGLError(true)
+      return
+    }
     renderer.setSize(containerRef.current.clientWidth, containerRef.current.clientHeight)
     renderer.setPixelRatio(window.devicePixelRatio)
     containerRef.current.appendChild(renderer.domElement)
     rendererRef.current = renderer
+
+    // Handle WebGL context loss gracefully
+    renderer.domElement.addEventListener("webglcontextlost", (e) => {
+      e.preventDefault()
+      setWebGLError(true)
+    })
 
     // Lighting
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.6)
@@ -502,6 +528,25 @@ export default function PipeModel() {
   }
 
   const activeLayer = LAYERS.find((l) => l.id === (selectedLayer || hoveredLayer))
+
+  if (webGLError) {
+    return (
+      <div style={{ background: "#0f1e35" }} className="px-6 py-12 md:px-12 text-center">
+        <p className="text-yellow-400 text-sm font-semibold tracking-widest uppercase mb-3">Interactive 3D Model</p>
+        <p className="text-gray-400 text-sm mb-6">
+          3D rendering is not available in this browser or device.
+          <br />
+          Please try a desktop browser with hardware acceleration enabled.
+        </p>
+        <img
+          src="/images/IT3-System1.png"
+          alt="IT3 System cross-section"
+          className="mx-auto rounded-lg"
+          style={{ maxHeight: 320, objectFit: "contain" }}
+        />
+      </div>
+    )
+  }
 
   return (
     <div style={{ background: "#0f1e35" }}>
