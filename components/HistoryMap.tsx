@@ -54,14 +54,19 @@ export default function HistoryMap() {
         minZoom: 2,
       })
 
+      // Base: ESRI World Light Gray (clean light style, English labels)
       L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+        "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
         {
-          attribution:
-            "&copy; OpenStreetMap contributors &copy; CARTO",
-          subdomains: "abcd",
-          maxZoom: 19,
+          attribution: "&copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors",
+          maxZoom: 16,
         }
+      ).addTo(map)
+
+      // Reference overlay: English country/continent labels
+      L.tileLayer(
+        "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}",
+        { maxZoom: 16, opacity: 0.6 }
       ).addTo(map)
 
       const markers: unknown[] = []
