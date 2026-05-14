@@ -356,6 +356,10 @@ function ServicesGrid() {
     {
       title: "Environmental Sustainability",
       photo: "/images/Environmental-Sustainability.jpeg",
+      photos: [
+        "/images/Environmental-Sustainability.jpeg",
+        "/images/Environmental-Sustainability2.jpeg",
+      ],
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
