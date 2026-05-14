@@ -24,7 +24,7 @@ const LOCATIONS: MapPin[] = [
   { lat: 40.7,  lng: -74.1,  label: "New York Metro",           count: 3,  detail: "Con Edison East River, NYC (1997) · Con Edison Astoria, NYC (1993) · BP Newark, NJ (1984)" },
   { lat: 26.5,  lng: -78.7,  label: "Freeport, Grand Bahama",   count: 1,  detail: "Burmah Oil — sea water offshore pipeline (1980)" },
   { lat: -9.0,  lng: -75.0,  label: "Northern Peru",            count: 15, detail: "Eten, Salaverry, Chimbote, Supe, Callao — multiple pipelines (2007–2013)" },
-  { lat: -30.0, lng: -71.0,  label: "Southern Peru & Chile",    count: 1,  detail: "Mollendo & Ilo, Peru · Arica, Chile — crude oil pipelines (2007–2012)" },
+  { lat: -30.0, lng: -71.0,  label: "Arica, Chile 2012",         count: 1,  detail: "Mollendo & Ilo, Peru · Arica, Chile — crude oil pipelines (2007–2012)" },
 ]
 
 export default function HistoryMap() {
@@ -76,14 +76,14 @@ export default function HistoryMap() {
 
         const iconHtml = multi
           ? `<div style="background:#0f1e35;border:2.5px solid #facc15;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#facc15;font-family:system-ui,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.45);cursor:pointer">${pin.count}</div>`
-          : `<div style="background:#0f1e35;border:2.5px solid #facc15;border-radius:50%;width:14px;height:14px;box-shadow:0 2px 6px rgba(0,0,0,.4);cursor:pointer"></div>`
+          : `<div style="background:#0f1e35;border:2.5px solid #facc15;border-radius:50%;width:21px;height:21px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#facc15;font-family:system-ui,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.4);cursor:pointer">1</div>`
 
         const icon = L.divIcon({
           html: iconHtml,
           className: "",
-          iconSize: multi ? [30, 30] : [14, 14],
-          iconAnchor: multi ? [15, 15] : [7, 7],
-          popupAnchor: [0, multi ? -18 : -10],
+          iconSize: multi ? [30, 30] : [21, 21],
+          iconAnchor: multi ? [15, 15] : [10, 10],
+          popupAnchor: [0, multi ? -18 : -13],
         })
 
         const popupHtml =
