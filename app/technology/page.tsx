@@ -99,7 +99,7 @@ export default function Technology() {
 
             {/* CompressedLiner graphic */}
             <img
-              src="/images/CompressedLiner.png"
+              src="/images/CompressedLiner3.png"
               alt="Compressed Liner Classification diagram"
               className="w-full h-auto"
               style={{ marginTop: "2rem", marginBottom: "2rem" }}
