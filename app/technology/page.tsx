@@ -97,6 +97,14 @@ export default function Technology() {
               </p>
             </blockquote>
 
+            {/* CompressedLiner graphic */}
+            <img
+              src="/images/CompressedLiner.png"
+              alt="Compressed Liner Classification diagram"
+              className="w-full h-auto"
+              style={{ marginTop: "2rem", marginBottom: "2rem" }}
+            />
+
             <p className="text-gray-800 mb-4">
               The IT3 System design is based on the concept that the liner is not directly bonded/fixed to the ID of the
               steel casing through deformation which does not affect its natural state. Through this unique concept the
