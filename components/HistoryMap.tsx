@@ -96,6 +96,15 @@ export default function HistoryMap() {
       const group = L.featureGroup(markers)
       map.fitBounds(group.getBounds().pad(0.12))
 
+      // Tone down attribution — required by OSM/CARTO terms but made unobtrusive
+      const attrEl = map.attributionControl.getContainer()
+      if (attrEl) {
+        attrEl.style.fontSize = "9px"
+        attrEl.style.opacity = "0.45"
+        attrEl.style.background = "transparent"
+        attrEl.style.boxShadow = "none"
+      }
+
       leafletMap.current = map as { remove: () => void }
     }
 
