@@ -145,6 +145,10 @@ function ServicesGrid() {
     {
       title: "IT3 System Installation",
       photo: "/images/IT3-System-Installation.png",
+      photos: [
+        "/images/system-installation1.jpeg",
+        "/images/system-installation2.jpeg",
+      ],
       photoContain: true,
       icon: (
         <svg
@@ -163,7 +167,7 @@ function ServicesGrid() {
         </svg>
       ),
       description:
-        "Our flagship service installs the proprietary IT3 multiwall piping system in new and existing pipelines, providing superior corrosion protection and structural integrity.",
+        "PPT installs the proprietary IT3 multiwall piping system in new and existing pipelines, providing superior corrosion protection and structural integrity.",
       expandedContent: (
         <div className="text-left">
           <h4 className="font-semibold mb-3 text-yellow-400 text-sm uppercase tracking-wide">
