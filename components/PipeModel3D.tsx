@@ -42,7 +42,7 @@ const LAYERS = [
   },
   {
     id: "polymer",
-    name: "Polymer Liner (Hollow)",
+    name: "Polymer Liner",
     color: "#FFD700",
     innerRadius: 0,
     outerRadius: 0.48,
@@ -130,15 +130,6 @@ export default function PipeModel() {
       meshesRef.current.push(mesh)
     })
 
-    // Add edge lines for definition
-    LAYERS.forEach((layer) => {
-      const edges = createHalfPipeEdges(layer.innerRadius, layer.outerRadius, layer.height, 64)
-      edges.forEach((edge) => {
-        const lineMaterial = new THREE.LineBasicMaterial({ color: 0x333333, linewidth: 1 })
-        const line = new THREE.Line(edge, lineMaterial)
-        pipeGroup.add(line)
-      })
-    })
 
     // Animation loop
     const animate = () => {
