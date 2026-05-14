@@ -20,15 +20,21 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* ── Stats Bar ── */}
-      <div className="w-full bg-white border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-          {["54+ Years of Innovation", "65+ Projects", "North & South America", "Vacuum to 3500 PSI"].map((stat, i, arr) => (
-            <div key={stat} className="flex items-center gap-6">
-              <span className="text-sm font-semibold tracking-wide" style={{ color: "#0f1e35" }}>{stat}</span>
-              {i < arr.length - 1 && <span className="text-gray-300 font-light select-none">|</span>}
-            </div>
-          ))}
+      {/* ── Company Facts Cards ── */}
+      <div className="w-full px-4 py-8 bg-gray-100">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <div className="bg-yellow-400 p-6 rounded-lg text-center shadow-md">
+            <p className="text-3xl font-bold text-black mb-2">50+</p>
+            <p className="text-black">Combined Years of Experience</p>
+          </div>
+          <div className="bg-yellow-400 p-6 rounded-lg text-center shadow-md">
+            <p className="text-3xl font-bold text-black mb-2">65+</p>
+            <p className="text-black">Major Projects Completed</p>
+          </div>
+          <div className="bg-yellow-400 p-6 rounded-lg text-center shadow-md">
+            <p className="text-3xl font-bold text-black mb-2">12</p>
+            <p className="text-black">Regions Served</p>
+          </div>
         </div>
       </div>
 
@@ -141,24 +147,6 @@ export default function AboutUs() {
             </div>
           </div>
 
-          {/* Company Facts */}
-          <div className="border-t border-gray-200 pt-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-6">Company Facts</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-yellow-400 p-4 rounded-lg text-center shadow-md">
-                <p className="text-3xl font-bold text-black mb-2">50+</p>
-                <p className="text-black">Combined Years of Experience</p>
-              </div>
-              <div className="bg-yellow-400 p-4 rounded-lg text-center shadow-md">
-                <p className="text-3xl font-bold text-black mb-2">65+</p>
-                <p className="text-black">Major Projects Completed</p>
-              </div>
-              <div className="bg-yellow-400 p-4 rounded-lg text-center shadow-md">
-                <p className="text-3xl font-bold text-black mb-2">12</p>
-                <p className="text-black">Regions Served</p>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Contact Section */}
