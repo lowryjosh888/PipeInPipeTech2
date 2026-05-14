@@ -441,27 +441,14 @@ function ServicesGrid() {
       expandedContent: (
         <div className="text-left">
           <h4 className="font-semibold mb-3 text-yellow-400 text-sm uppercase tracking-wide">
-            Maintenance Program Components
+            Minimal Maintenance Required
           </h4>
-          <ul className="grid grid-cols-2 gap-x-6 gap-y-2 mb-5">
-            {[
-              "Scheduled inspection intervals",
-              "Preventative maintenance procedures",
-              "Early detection of potential issues",
-              "Detailed documentation and reporting",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-2 text-gray-300">
-                <span className="text-yellow-400 mt-1 flex-shrink-0">▸</span>
-                {item}
-              </li>
-            ))}
-          </ul>
           <p className="text-gray-400 leading-relaxed">
-            Our maintenance programs are designed to maximize the lifespan of your pipeline
-            infrastructure while minimizing unexpected failures. Through regular inspections and
-            preventative maintenance, we identify and address potential issues before they become
-            costly problems. Our customized maintenance plans are tailored to your specific pipeline
-            system, operating conditions, and budget constraints.
+            Once the IT3 system is installed and functioning, minimal maintenance is required. It&apos;s
+            recommended to perform periodic pressure tests and cleaning to ensure the system continues
+            to operate at peak capacity. The cadence of cleaning depends on the type of fluids
+            transported through the piping system. Our team can provide guidance on recommended
+            maintenance schedules.
           </p>
         </div>
       ),
