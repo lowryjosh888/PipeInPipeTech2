@@ -9,7 +9,7 @@ export default function AboutUs() {
       <div
         className="relative w-full h-72 md:h-96 flex items-end"
         style={{
-          backgroundImage: "url('/images/DJI_0031.jpg')",
+          backgroundImage: "url('/images/about-us-hero2.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -39,10 +39,6 @@ export default function AboutUs() {
       </div>
 
       <div className="w-full px-4 py-12">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">About Pipe-in-Pipe Technologies</h1>
-        </div>
-
         {/* Company Overview */}
         <div className="bg-white rounded-lg shadow-xl p-8 max-w-7xl mx-auto mb-12">
           <div className="mb-8">
