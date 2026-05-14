@@ -416,7 +416,10 @@ function ServicesGrid() {
     {
       title: "Maintenance Programs",
       photo: "/images/Maintenance-Programs3.jpg",
-      photoContain: true,
+      photos: [
+        "/images/Maintenance-Programs2.jpg",
+        "/images/Maintenance-Programs3.jpg",
+      ],
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -557,7 +560,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">PPT Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide comprehensive pipe rehabilitation solutions using cutting-edge technology
+              We provide comprehensive pipe rehabilitation solutions using cutting-edge technology. Tap or click each card below to learn more.
             </p>
           </div>
 
