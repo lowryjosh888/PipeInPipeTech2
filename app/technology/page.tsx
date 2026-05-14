@@ -51,6 +51,7 @@ export default function Technology() {
                   src="/images/IT3-System1.png"
                   alt="IT3 System"
                   className="w-full h-full object-contain"
+                  style={{ objectPosition: "left center" }}
                 />
               </div>
               <div className="flex-1 overflow-hidden rounded-lg bg-gray-50 flex items-center justify-center" style={{ height: 320 }}>
@@ -58,6 +59,7 @@ export default function Technology() {
                   src="/images/IT3-System2.jpeg"
                   alt="IT3 System"
                   className="w-full h-full object-contain"
+                  style={{ objectPosition: "right center" }}
                 />
               </div>
             </div>
