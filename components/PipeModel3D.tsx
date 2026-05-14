@@ -22,7 +22,7 @@ const LAYERS = [
   {
     id: "steel",
     name: "Steel Pipe",
-    color: "#A9A9A9",
+    color: "#A8B8C8",
     innerRadius: 0.72,
     outerRadius: 0.9,
     height: 2.5,
@@ -77,7 +77,7 @@ export default function PipeModel() {
 
     // Scene setup
     const scene = new THREE.Scene()
-    scene.background = new THREE.Color(0x0f1e35)
+    scene.background = new THREE.Color(0xffffff)
     sceneRef.current = scene
 
     // Camera
@@ -637,7 +637,6 @@ export default function PipeModel() {
                         />
                         <div className="text-left flex-1 min-w-0">
                           <div className="text-sm font-medium text-slate-900 truncate">{layer.name}</div>
-                          <div className="text-xs text-slate-500">{layer.thickness}</div>
                         </div>
                       </button>
                     ))}
