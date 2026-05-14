@@ -9,7 +9,7 @@ export default function AboutUs() {
       <div
         className="relative w-full h-72 md:h-96 flex items-end"
         style={{
-          backgroundImage: "url('/images/Custom-Engineering-Solutions.jpeg')",
+          backgroundImage: "url('/images/DJI_0031.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
