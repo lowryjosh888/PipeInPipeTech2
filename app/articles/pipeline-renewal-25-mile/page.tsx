@@ -9,7 +9,7 @@ export default function PipelineRenewal25Mile() {
       <div
         className="relative w-full h-72 md:h-96 flex items-end"
         style={{
-          backgroundImage: "url('/images/system-installation1.jpeg')",
+          backgroundImage: "url('/images/BenefitStrips1.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
