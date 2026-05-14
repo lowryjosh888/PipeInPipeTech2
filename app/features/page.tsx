@@ -13,86 +13,54 @@ export default function Features() {
           <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">IT3 System Features</h1>
         </div>
 
-        <div className="bg-white rounded-lg shadow-xl p-8 max-w-7xl mx-auto mb-12">
-          <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Key Features of the IT3 System</h2>
-            <p className="text-gray-600 mb-6">
+        {/* ── Key Features — photo background treatment ── */}
+        <div className="relative overflow-hidden max-w-7xl mx-auto mb-8 rounded-xl shadow-xl">
+          {/* Background photo */}
+          <img
+            src="/images/BenefitStrips1.jpg"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          {/* Dark navy overlay ~90% */}
+          <div className="absolute inset-0" style={{ background: "rgba(10, 22, 40, 0.90)" }} />
+
+          {/* Content */}
+          <div className="relative px-8" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
+            <h2 className="text-2xl font-bold text-white mb-4">Key Features of the IT3 System</h2>
+            <p className="mb-8" style={{ color: "rgba(255,255,255,0.75)" }}>
               The IT3 Multiwall Pipe System is built on a design principle that ensures the plastic carrier pipe is
               separated from the steel containment pipe, delivering several key benefits and features that make it the
               ideal solution for challenging pipeline environments.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-gray-50 p-6 rounded-lg flex">
-                <Layers className="h-12 w-12 text-yellow-400 mr-4 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Three-Phase Design</h3>
-                  <p className="text-gray-600">
-                    The IT3 System features three distinct layers: an inner plastic liner, an outer steel or hard
-                    material casing, and a cement grout filling the annular space between them, creating a robust
-                    multiwall piping solution.
-                  </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                { icon: <Layers className="h-10 w-10 text-yellow-400 flex-shrink-0" />, title: "Three-Phase Design", body: "The IT3 System features three distinct layers: an inner plastic liner, an outer steel or hard material casing, and a cement grout filling the annular space between them, creating a robust multiwall piping solution." },
+                { icon: <Settings className="h-10 w-10 text-yellow-400 flex-shrink-0" />, title: "Flange or Flange-Free Installation", body: "The system eliminates the need for numerous flanges, simplifying installation and reducing potential leak points. This is dependent on valves, flow monitors, and other components." },
+                { icon: <Zap className="h-10 w-10 text-yellow-400 flex-shrink-0" />, title: "Controlled Stress State", body: "The plastic liner remains within its elastic deformation range, extending its lifespan and preventing stress-related failures common in other piping systems." },
+                { icon: <Wrench className="h-10 w-10 text-yellow-400 flex-shrink-0" />, title: "Liner Material Flexibility", body: "Any type of plastic pipe can be used as the liner, offering adaptability for different applications and fluid types, from corrosive chemicals to high-temperature streams." },
+                { icon: <Droplets className="h-10 w-10 text-yellow-400 flex-shrink-0" />, title: "Corrosion Protection", body: "The high pH of the cement grout passivates steel and acts as an inhibitor between the OD of the inner liner and ID of the outer steel casing, providing a secondary corrosion defense system." },
+                { icon: <Gauge className="h-10 w-10 text-yellow-400 flex-shrink-0" />, title: "High-Performance Under Pressure", body: "The IT3 System can handle pressures from vacuum to 3500 psi, making it suitable for a wide range of industrial applications from low-pressure drainage to high-pressure transport lines." },
+              ].map((card, i) => (
+                <div
+                  key={i}
+                  className="flex gap-4 p-6 rounded-lg"
+                  style={{ background: "#0f1e35", borderLeft: "3px solid #f4c430" }}
+                >
+                  {card.icon}
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-2">{card.title}</h3>
+                    <p className="text-sm leading-relaxed" style={{ color: "#cbd5e1" }}>{card.body}</p>
+                  </div>
                 </div>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg flex">
-                <Settings className="h-12 w-12 text-yellow-400 mr-4 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Flange or Flange-Free Installation</h3>
-                  <p className="text-gray-600">
-                    The system eliminates the need for numerous flanges, simplifying installation and reducing potential
-                    leak points. This is dependent on valves, flow monitors, and other components.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg flex">
-                <Zap className="h-12 w-12 text-yellow-400 mr-4 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Controlled Stress State</h3>
-                  <p className="text-gray-600">
-                    The plastic liner remains within its elastic deformation range, extending its lifespan and
-                    preventing stress-related failures common in other piping systems.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg flex">
-                <Wrench className="h-12 w-12 text-yellow-400 mr-4 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Liner Material Flexibility</h3>
-                  <p className="text-gray-600">
-                    Any type of plastic pipe can be used as the liner, offering adaptability for different applications
-                    and fluid types, from corrosive chemicals to high-temperature streams.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg flex">
-                <Droplets className="h-12 w-12 text-yellow-400 mr-4 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Corrosion Protection</h3>
-                  <p className="text-gray-600">
-                    The high pH of the cement grout passivates steel and acts as an inhibitor between the OD of the
-                    inner liner and ID of the outer steel casing, providing a secondary corrosion defense system.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg flex">
-                <Gauge className="h-12 w-12 text-yellow-400 mr-4 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">High-Performance Under Pressure</h3>
-                  <p className="text-gray-600">
-                    The IT3 System can handle pressures from vacuum to 3500 psi, making it suitable for a wide range of
-                    industrial applications from low-pressure drainage to high-pressure transport lines.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
+        </div>
 
-          <div className="border-t border-gray-200 pt-8 mb-8">
+        <div className="bg-white rounded-lg shadow-xl p-8 max-w-7xl mx-auto mb-12">
+          <div className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Specialized Features</h2>
 
             <div className="mb-8">
