@@ -23,7 +23,7 @@ export default function Features() {
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           {/* Dark navy overlay ~90% */}
-          <div className="absolute inset-0" style={{ background: "rgba(10, 22, 40, 0.90)" }} />
+          <div className="absolute inset-0" style={{ background: "rgba(10, 22, 40, 0.76)" }} />
 
           {/* Content */}
           <div className="relative px-8" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
