@@ -11,6 +11,7 @@ interface Service {
   icon: React.ReactNode
   description: string
   photo: string | null // path relative to /public — e.g. "/images/it3-install.jpg"
+  photos?: string[]    // optional array — when present, renders a 3-up photo row instead of single photo
   photoContain?: boolean // true = show full image (object-contain); false/omit = crop to fill (object-cover)
   expandedContent: React.ReactNode
 }
@@ -63,7 +64,19 @@ function ServiceModal({
         </button>
 
         {/* Photo or placeholder */}
-        {service.photo ? (
+        {service.photos && service.photos.length > 1 ? (
+          <div className="w-full h-72 flex overflow-hidden rounded-t-2xl">
+            {service.photos.map((src, i) => (
+              <div key={i} className="flex-1 overflow-hidden">
+                <img
+                  src={src}
+                  alt={`${service.title} ${i + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        ) : service.photo ? (
           <div className={`w-full h-72 overflow-hidden rounded-t-2xl ${service.photoContain ? "bg-slate-800 flex items-center justify-center" : ""}`}>
             <img
               src={service.photo}
@@ -230,6 +243,11 @@ function ServicesGrid() {
     {
       title: "Pipeline Assessment",
       photo: "/images/Pipeline-Assessment.JPG",
+      photos: [
+        "/images/Pipeline-Assessment.JPG",
+        "/images/pipeline-assessment2.jpeg",
+        "/images/pipeline-assessment3.jpeg",
+      ],
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -255,7 +273,7 @@ function ServicesGrid() {
           </h4>
           <ul className="grid grid-cols-2 gap-x-6 gap-y-2 mb-5">
             {[
-              "Advanced camera inspection technology",
+              "Intelligent pigging technology assessment",
               "Structural integrity testing",
               "Corrosion and wear analysis",
               "Detailed reporting with rehabilitation recommendations",
