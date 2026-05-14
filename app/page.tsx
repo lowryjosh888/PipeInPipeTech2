@@ -300,7 +300,7 @@ function ServicesGrid() {
     },
     {
       title: "Custom Engineering Solutions",
-      photo: "/images/custom-engineering-solutions2.JPG",
+      photo: "/images/custom-engineering-solutions3.JPG",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
