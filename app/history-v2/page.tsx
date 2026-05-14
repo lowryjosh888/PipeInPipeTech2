@@ -129,8 +129,8 @@ export default function HistoryV2() {
                 </p>
               </div>
 
-              {/* Map on the right */}
-              <div className="flex-1 min-w-0">
+              {/* Map on the right — isolation:isolate scopes Leaflet's z-indices (200–700) within this stacking context */}
+              <div className="flex-1 min-w-0" style={{ isolation: "isolate" }}>
                 <HistoryMap />
               </div>
             </div>
