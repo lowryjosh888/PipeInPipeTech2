@@ -127,6 +127,75 @@ export default function Technology() {
             </p>
           </div>
 
+          {/* Technical Example */}
+          <div className="border-t border-gray-200 pt-8 mb-8">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Technical Example</h2>
+            <p className="text-gray-800 mb-6">
+              By intentionally disregarding the compressive effect of the cement on the inner liner during its set, a
+              specific instance using a P.V.C. liner illustrates the magnitude of stress to be projected in the liner
+              and steel layers:
+            </p>
+
+            {/* Example Parameters */}
+            <div className="rounded-lg p-6 mb-8" style={{ background: "#f9fafb" }}>
+              <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-gray-700">
+                <div>• Internal pressure = 2,200 psi</div>
+                <div>• Steel O.D. = 6.625"</div>
+                <div>• P.V.C. O.D. = 4.5"</div>
+                <div>• Steel Thickness = .312"</div>
+                <div>• P.V.C. thickness = .337"</div>
+              </div>
+            </div>
+
+            {/* Liner Performance */}
+            <div className="mb-8">
+              <p
+                className="text-center font-medium text-gray-500 uppercase mb-4"
+                style={{ fontSize: "14px", letterSpacing: "0.5px" }}
+              >
+                Liner Performance
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-xl p-6 text-center" style={{ background: "#1e3a5f" }}>
+                  <div className="text-4xl font-extrabold text-yellow-400 leading-none mb-1">160</div>
+                  <div className="text-gray-400 uppercase tracking-wide mt-1" style={{ fontSize: "11px" }}>PSI</div>
+                  <div className="text-white mt-2" style={{ fontSize: "13px" }}>Tangential Stress in P.V.C.</div>
+                </div>
+                <div className="rounded-xl p-6 text-center" style={{ background: "#1e3a5f" }}>
+                  <div className="text-4xl font-extrabold text-yellow-400 leading-none mb-1">2,600</div>
+                  <div className="text-gray-400 uppercase tracking-wide mt-1" style={{ fontSize: "11px" }}>PSI</div>
+                  <div className="text-white mt-2" style={{ fontSize: "13px" }}>Plastic Limit of P.V.C.</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Steel Stress Comparison */}
+            <div className="mb-2">
+              <p
+                className="text-center font-medium text-gray-500 uppercase mb-4"
+                style={{ fontSize: "14px", letterSpacing: "0.5px" }}
+              >
+                Steel Stress Comparison
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-xl p-6 text-center" style={{ background: "#1e3a5f" }}>
+                  <div className="font-extrabold text-yellow-400 leading-none mb-1" style={{ fontSize: "40px", color: "#f4c430" }}>11,475</div>
+                  <div className="text-gray-400 mt-1" style={{ fontSize: "11px" }}>PSI</div>
+                  <div className="text-white mt-2" style={{ fontSize: "13px" }}>Tangential Stress in Steel</div>
+                  <div className="text-gray-400 italic mt-1" style={{ fontSize: "12px" }}>Reduced from 21,150 PSI before IT3</div>
+                </div>
+                <div
+                  className="rounded-xl p-6 flex flex-col items-center justify-center text-center"
+                  style={{ background: "#f4c430" }}
+                >
+                  <div className="font-extrabold leading-none mb-1" style={{ fontSize: "56px", color: "#1e3a5f" }}>46%</div>
+                  <div className="font-semibold mt-1" style={{ fontSize: "15px", color: "#1e3a5f" }}>Stress Reduction</div>
+                  <div className="mt-1" style={{ fontSize: "12px", color: "#2d5282" }}>vs. conventional single-wall pipe</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Neat Cement Grout */}
           <div className="border-t border-gray-200 pt-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">The Crucial Component: Neat Cement Grout</h2>
@@ -210,58 +279,6 @@ export default function Technology() {
                     Acts as a thermal insulator
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Technical Example */}
-          <div className="border-t border-gray-200 pt-8 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Technical Example</h2>
-            <p className="text-gray-800 mb-6">
-              By intentionally disregarding the compressive effect of the cement on the inner liner during its set, a
-              specific instance using a P.V.C. liner illustrates the magnitude of stress to be projected in the liner
-              and steel layers:
-            </p>
-
-            {/* Example Parameters */}
-            <div className="bg-gray-50 p-6 rounded-lg mb-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">Example Parameters</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Internal pressure = 2,200 psi</li>
-                <li>• Steel O.D. = 6.625"</li>
-                <li>• P.V.C. O.D. = 4.5"</li>
-                <li>• Steel Thickness = .312"</li>
-                <li>• P.V.C. thickness = .337"</li>
-              </ul>
-            </div>
-
-            {/* ── Step 6: Large bold callout number stats ── */}
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">Results</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div className="rounded-xl p-5 text-center border-l-4 border-yellow-400" style={{ background: "#0f1e35" }}>
-                <div className="text-4xl font-extrabold text-yellow-400 leading-none mb-1">160</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wide mt-1">psi</div>
-                <div className="text-sm text-gray-300 mt-2">Tangential Stress in P.V.C.</div>
-              </div>
-              <div className="rounded-xl p-5 text-center border-l-4 border-yellow-400" style={{ background: "#0f1e35" }}>
-                <div className="text-4xl font-extrabold text-yellow-400 leading-none mb-1">2,600</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wide mt-1">psi</div>
-                <div className="text-sm text-gray-300 mt-2">Plastic Limit of P.V.C.</div>
-              </div>
-              <div className="rounded-xl p-5 text-center border-l-4 border-yellow-400" style={{ background: "#0f1e35" }}>
-                <div className="text-4xl font-extrabold text-yellow-400 leading-none mb-1">11,475</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wide mt-1">psi</div>
-                <div className="text-sm text-gray-300 mt-2">Tangential Stress in Steel (IT3)</div>
-              </div>
-              <div className="rounded-xl p-5 text-center border-l-4 border-yellow-400" style={{ background: "#0f1e35" }}>
-                <div className="text-4xl font-extrabold text-yellow-400 leading-none mb-1">21,150</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wide mt-1">psi</div>
-                <div className="text-sm text-gray-300 mt-2">Tangential Stress in Steel (No IT3)</div>
-              </div>
-              <div className="col-span-2 md:col-span-2 rounded-xl p-5 text-center border-l-4 border-yellow-400 flex flex-col items-center justify-center" style={{ background: "#0a1628" }}>
-                <div className="text-6xl font-extrabold text-yellow-400 leading-none mb-1">46%</div>
-                <div className="text-base text-gray-200 mt-2 font-semibold">Reduction in Stress Imposed on Steel</div>
-                <div className="text-xs text-gray-400 mt-1">vs. conventional single-wall pipe</div>
               </div>
             </div>
           </div>
