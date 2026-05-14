@@ -42,7 +42,8 @@ export default function Features() {
 
           {/* Content */}
           <div className="relative px-8" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
-            <h2 className="text-2xl font-bold text-white mb-4">Key Features of the IT3 System</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">Key Features of the IT3 System</h2>
+            <div className="w-16 h-1 mb-6" style={{ background: "#f4c430" }} />
             <p className="mb-8" style={{ color: "rgba(255,255,255,0.75)" }}>
               The IT3 Multiwall Pipe System is built on a design principle that ensures the plastic carrier pipe is
               separated from the steel containment pipe, delivering several key benefits and features that make it the
@@ -76,10 +77,12 @@ export default function Features() {
 
         <div className="bg-white rounded-lg shadow-xl p-8 max-w-7xl mx-auto mb-12">
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Specialized Features</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Specialized Features</h2>
+            <div className="w-16 h-1 mb-6" style={{ background: "#f4c430" }} />
 
             <div className="mb-16">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Collar Coupling</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Collar Coupling</h3>
+              <div className="w-16 h-1 mb-4" style={{ background: "#f4c430" }} />
               <p className="text-gray-600 mb-4">
                 New IT piping systems incorporate a patented coupling device, the Collar, enabling simultaneous
                 welding of the steel and fiberglass components for a robust joint. This innovative coupling
@@ -115,7 +118,8 @@ export default function Features() {
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">In-Situ Rejuvenation</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">In-Situ Rejuvenation</h3>
+              <div className="w-16 h-1 mb-4" style={{ background: "#f4c430" }} />
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="relative h-48 md:h-auto rounded-lg overflow-hidden bg-gray-200">
                   <Image
@@ -142,7 +146,8 @@ export default function Features() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Centralization Technology</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Centralization Technology</h3>
+              <div className="w-16 h-1 mb-4" style={{ background: "#f4c430" }} />
 
               {/* Paragraph 1 — opening */}
               <p className="text-gray-600 mb-4">
@@ -205,7 +210,8 @@ export default function Features() {
           </div>
 
           <div className="border-t border-gray-200 pt-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Applications</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Applications</h2>
+            <div className="w-16 h-1 mb-4" style={{ background: "#f4c430" }} />
             <p className="text-gray-600 mb-6">
               The main target with the majority of multilayer processes is to combine various properties that are
               difficult, if not impossible to achieve in a single material. The IT3 System is suitable for a wide range
