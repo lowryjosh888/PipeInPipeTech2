@@ -46,18 +46,18 @@ export default function Technology() {
 
             {/* Two photos between paragraphs */}
             <div className="flex gap-3 mb-4 w-full">
-              <div className="flex-1 overflow-hidden rounded-lg" style={{ height: 280 }}>
+              <div className="flex-1 overflow-hidden rounded-lg bg-gray-50 flex items-center justify-center" style={{ height: 320 }}>
                 <img
                   src="/images/IT3-System1.png"
                   alt="IT3 System"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
-              <div className="flex-1 overflow-hidden rounded-lg" style={{ height: 280 }}>
+              <div className="flex-1 overflow-hidden rounded-lg bg-gray-50 flex items-center justify-center" style={{ height: 320 }}>
                 <img
                   src="/images/IT3-System2.jpeg"
                   alt="IT3 System"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
