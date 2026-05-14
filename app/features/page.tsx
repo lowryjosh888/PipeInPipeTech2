@@ -213,32 +213,34 @@ export default function Features() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">Oil & Gas Pipelines</h3>
-                <p className="text-gray-600">
-                  For crude oil, refined products, and natural gas transport with corrosion protection
-                </p>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">Chemical Processing</h3>
-                <p className="text-gray-600">For handling corrosive chemicals and preventing contamination</p>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">Mining Operations</h3>
-                <p className="text-gray-600">For slurry transport and acid-resistant applications</p>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">Municipal Infrastructure</h3>
-                <p className="text-gray-600">For water and wastewater systems with extended service life</p>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">Submarine Pipelines</h3>
-                <p className="text-gray-600">With enhanced stability and corrosion resistance in marine environments</p>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 mb-2">Power Utilities</h3>
-                <p className="text-gray-600">For cooling water systems and process piping with thermal insulation</p>
-              </div>
+              {[
+                { title: "Oil & Gas Pipelines",     body: "For crude oil, refined products, and natural gas transport with corrosion protection",         photo: "/images/Pipeline-Assessment.JPG" },
+                { title: "Chemical Processing",      body: "For handling corrosive chemicals and preventing contamination",                                photo: "/images/Environmental-Sustainability2.jpeg" },
+                { title: "Mining Operations",        body: "For slurry transport and acid-resistant applications",                                        photo: "/images/insertion.JPG" },
+                { title: "Municipal Infrastructure", body: "For water and wastewater systems with extended service life",                                 photo: "/images/Maintenance-Programs3.jpg" },
+                { title: "Submarine Pipelines",      body: "With enhanced stability and corrosion resistance in marine environments",                     photo: "/images/offshore-pipeline-installation.png" },
+                { title: "Power Utilities",          body: "For cooling water systems and process piping with thermal insulation",                        photo: "/images/system-installation1.jpeg" },
+              ].map((card, i) => (
+                <div
+                  key={i}
+                  className="relative overflow-hidden rounded-lg"
+                  style={{ borderLeft: "3px solid #f4c430", minHeight: "160px" }}
+                >
+                  {/* Background photo */}
+                  <img
+                    src={card.photo}
+                    alt={card.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  {/* Navy overlay ~78% */}
+                  <div className="absolute inset-0" style={{ background: "rgba(15, 30, 53, 0.78)" }} />
+                  {/* Content */}
+                  <div className="relative z-10 p-6">
+                    <h3 className="font-bold text-white mb-2">{card.title}</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">{card.body}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
