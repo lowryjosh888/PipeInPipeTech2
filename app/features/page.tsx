@@ -146,19 +146,45 @@ export default function Features() {
               <p className="text-gray-600 mb-4">
                 The IT3 System features a unique approach to liner centralization within the outer casing:
               </p>
-              <div className="bg-gray-50 p-6 rounded-lg mb-4">
-                <p className="text-gray-600 mb-4">
-                  Without the use of any centralizers, the plastic liner surrounded by cement slurry with a specific
-                  gravity of 1.8 will rise to the top/12:00 position causing a buoyancy effect. This is exceptionally
-                  beneficial in rejuvenation applications since the majority of localized corrosion occurs at the bottom
-                  of the pipeline.
-                </p>
-                <p className="text-gray-600">
-                  Even with varying grout thickness (e.g., 0.3" at the top and 1.2" at the bottom), stress on the
-                  plastic liner varies insignificantly. With most standard in-situ rejuvenations, it is preferred to
-                  avoid the use of centralizers, though in other intricate situations, centralizing techniques have been
-                  and will be used.
-                </p>
+
+              {/* Paragraph 1 — buoyancy/corrosion */}
+              <p className="text-gray-600 mb-6">
+                Without the use of any centralizers, the plastic liner surrounded by cement slurry with a specific
+                gravity of 1.8 will rise to the top/12:00 position causing a buoyancy effect. This is exceptionally
+                beneficial in rejuvenation applications since the majority of localized corrosion occurs at the bottom
+                of the pipeline.
+              </p>
+
+              {/* 2-column photo grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div>
+                  <div className="h-64 rounded-lg overflow-hidden shadow-md">
+                    <img src="/images/pipe-centralizer1.jpg" alt="Centralizer device in-situ" className="w-full h-full object-cover" />
+                  </div>
+                  <p className="text-sm text-gray-600 font-medium text-center mt-2">Centralizer device in-situ</p>
+                </div>
+                <div>
+                  <div className="h-64 rounded-lg overflow-hidden shadow-md">
+                    <img src="/images/pipe-centralizer2.jpg.png" alt="Cross-section showing liner placement" className="w-full h-full object-cover" />
+                  </div>
+                  <p className="text-sm text-gray-600 font-medium text-center mt-2">Cross-section showing liner placement</p>
+                </div>
+              </div>
+
+              {/* Paragraph 2 — cement thickness/stress */}
+              <p className="text-gray-600 mb-6">
+                Even with varying grout thickness (e.g., 0.3" at the top and 1.2" at the bottom), stress on the
+                plastic liner varies insignificantly. With most standard in-situ rejuvenations, it is preferred to
+                avoid the use of centralizers, though in other intricate situations, centralizing techniques have been
+                and will be used.
+              </p>
+
+              {/* Single centered diagram */}
+              <div className="mb-8">
+                <div className="max-w-md mx-auto rounded-lg overflow-hidden shadow-md">
+                  <img src="/images/centralizing.png" alt="Varying grout thickness diagram" className="w-full h-auto" />
+                </div>
+                <p className="text-sm text-gray-600 font-medium text-center mt-2">Varying grout thickness: .3" at top, 1.2" at bottom</p>
               </div>
             </div>
           </div>
