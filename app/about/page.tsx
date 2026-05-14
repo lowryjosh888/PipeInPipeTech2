@@ -9,7 +9,7 @@ export default function AboutUs() {
       <div
         className="relative w-full h-72 md:h-96 flex items-end"
         style={{
-          backgroundImage: "url('/images/offshore-pipeline-installation.png')",
+          backgroundImage: "url('/images/Environmental-Sustainability.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
