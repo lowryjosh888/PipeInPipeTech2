@@ -119,7 +119,7 @@ export default function Features() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="relative h-48 md:h-auto rounded-lg overflow-hidden bg-gray-200">
                   <Image
-                    src="/placeholder.svg?height=300&width=300"
+                    src="/images/in-situ-rejuvenation.JPG"
                     alt="In-Situ Rejuvenation Process"
                     fill
                     className="object-cover"
