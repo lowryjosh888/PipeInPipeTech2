@@ -23,8 +23,8 @@ const LOCATIONS: MapPin[] = [
   { lat: 29.5,  lng: -97.2,  label: "South Texas",              count: 4,  detail: "San Antonio (1984), Corpus Christi (1981), Houston (1980), Texas City (1984)" },
   { lat: 40.7,  lng: -74.1,  label: "New York Metro",           count: 3,  detail: "Con Edison East River, NYC (1997) · Con Edison Astoria, NYC (1993) · BP Newark, NJ (1984)" },
   { lat: 26.5,  lng: -78.7,  label: "Freeport, Grand Bahama",   count: 1,  detail: "Burmah Oil — sea water offshore pipeline (1980)" },
-  { lat: 8.5,   lng: -78.5,  label: "Northern Peru",            count: 10, detail: "Eten, Salaverry, Chimbote, Supe, Callao — multiple pipelines (2007–2013)" },
-  { lat: 17.5,  lng: -71.5,  label: "Southern Peru & Chile",    count: 5,  detail: "Mollendo & Ilo, Peru · Arica, Chile — crude oil pipelines (2007–2012)" },
+  { lat: -9.0,  lng: -75.0,  label: "Northern Peru",            count: 15, detail: "Eten, Salaverry, Chimbote, Supe, Callao — multiple pipelines (2007–2013)" },
+  { lat: -30.0, lng: -71.0,  label: "Southern Peru & Chile",    count: 1,  detail: "Mollendo & Ilo, Peru · Arica, Chile — crude oil pipelines (2007–2012)" },
 ]
 
 export default function HistoryMap() {
