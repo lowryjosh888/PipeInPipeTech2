@@ -51,7 +51,7 @@ export default function AboutUs() {
               <div className="md:col-span-1">
                 <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-gray-200 mb-4">
                   <Image
-                    src="/placeholder.svg?height=400&width=400"
+                    src="/images/BrianOhlendorff.png"
                     alt="Brian Ohlendorff - CEO"
                     fill
                     className="object-cover"
