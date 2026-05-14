@@ -10,11 +10,12 @@ interface Service {
   title: string
   icon: React.ReactNode
   description: string
+  cardDescription?: string  // optional override shown on the card instead of description
   photo: string | null // path relative to /public — e.g. "/images/it3-install.jpg"
   photos?: string[]    // optional array — when present, renders a 3-up photo row instead of single photo
   photoContain?: boolean // true = show full image (object-contain); false/omit = crop to fill (object-cover)
   firstPhotoStyle?: React.CSSProperties // optional inline style applied only to the first photo in a photos[] row
-  expandedContent: React.ReactNode
+  expandedContent?: React.ReactNode
 }
 
 // ─── Modal ────────────────────────────────────────────────────────────────────
@@ -128,9 +129,12 @@ function ServiceModal({
 
           <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
-          <div className="border-t border-slate-700 mb-6" />
-
-          {service.expandedContent}
+          {service.expandedContent && (
+            <>
+              <div className="border-t border-slate-700 mb-6" />
+              {service.expandedContent}
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -414,12 +418,13 @@ function ServicesGrid() {
       ),
     },
     {
-      title: "Maintenance Programs",
+      title: "Minimal Maintenance Required",
       photo: "/images/Maintenance-Programs3.jpg",
       photos: [
         "/images/Maintenance-Programs2.jpg",
         "/images/Maintenance-Programs3.jpg",
       ],
+      cardDescription: "The IT3 system requires minimal ongoing maintenance.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -437,21 +442,7 @@ function ServicesGrid() {
         </svg>
       ),
       description:
-        "Proactive maintenance plans to ensure long-term performance of your pipeline infrastructure, including regular inspections and preventative care.",
-      expandedContent: (
-        <div className="text-left">
-          <h4 className="font-semibold mb-3 text-yellow-400 text-sm uppercase tracking-wide">
-            Minimal Maintenance Required
-          </h4>
-          <p className="text-gray-400 leading-relaxed">
-            Once the IT3 system is installed and functioning, minimal maintenance is required. It&apos;s
-            recommended to perform periodic pressure tests and cleaning to ensure the system continues
-            to operate at peak capacity. The cadence of cleaning depends on the type of fluids
-            transported through the piping system. Our team can provide guidance on recommended
-            maintenance schedules.
-          </p>
-        </div>
-      ),
+        "Once the IT3 system is installed and functioning, minimal maintenance is required. It’s recommended to perform periodic pressure tests and cleaning to ensure the system continues to operate at peak capacity. The cadence of cleaning depends on the type of fluids transported through the piping system. Our team can provide guidance on recommended maintenance schedules.",
     },
   ]
 
@@ -477,7 +468,7 @@ function ServicesGrid() {
             </h3>
 
             {/* Description */}
-            <p className="text-gray-400 text-sm leading-relaxed mb-5">{service.description}</p>
+            <p className="text-gray-400 text-sm leading-relaxed mb-5">{service.cardDescription ?? service.description}</p>
 
             {/* CTA hint — fades in on hover */}
             <div className="flex items-center gap-1 text-yellow-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
