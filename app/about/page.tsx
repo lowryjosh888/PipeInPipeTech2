@@ -24,15 +24,15 @@ export default function AboutUs() {
       <div className="w-full px-4 py-8 bg-gray-100">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           <div className="p-6 rounded-lg text-center shadow-md" style={{ background: "#0f1e35" }}>
-            <p className="text-3xl font-bold text-white mb-2">50+</p>
+            <p className="text-3xl font-bold mb-2" style={{ color: "#f4c430" }}>50+</p>
             <p className="text-white">Combined Years of Experience</p>
           </div>
           <div className="p-6 rounded-lg text-center shadow-md" style={{ background: "#0f1e35" }}>
-            <p className="text-3xl font-bold text-white mb-2">65+</p>
+            <p className="text-3xl font-bold mb-2" style={{ color: "#f4c430" }}>65+</p>
             <p className="text-white">Major Projects Completed</p>
           </div>
           <div className="p-6 rounded-lg text-center shadow-md" style={{ background: "#0f1e35" }}>
-            <p className="text-3xl font-bold text-white mb-2">12</p>
+            <p className="text-3xl font-bold mb-2" style={{ color: "#f4c430" }}>12</p>
             <p className="text-white">Regions Served</p>
           </div>
         </div>
