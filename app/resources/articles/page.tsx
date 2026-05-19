@@ -28,7 +28,7 @@ const articles = [
     date: "May 29, 2020",
     excerpt:
       "Case study demonstrating the application of IT3 technology in challenging subsea pipeline repair scenarios.",
-    href: "/articles/subsea-line-repair",
+    href: "/articles/multiwall-subsea-repair",
   },
   {
     title: "Advanced Pipeline Rehabilitation Techniques",
