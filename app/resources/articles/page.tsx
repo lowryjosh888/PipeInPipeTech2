@@ -21,7 +21,7 @@ const articles = [
     date: "May 29, 2020",
     excerpt:
       "How the IT3 System addresses corrosion challenges in sour gas environments with its compressed liner technology.",
-    href: "/articles/sour-gas-corrosion",
+    href: "/articles/multiwall-sour-gas-corrosion",
   },
   {
     title: "Multiwall System Used to Repair Subsea Line",
