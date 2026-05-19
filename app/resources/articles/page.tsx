@@ -10,11 +10,11 @@ const articles = [
     href: "/articles/concrete-cylinder-pipe-repair",
   },
   {
-    title: "IT3 System Renews 25 Mile Pipeline",
+    title: "Multiwall Piping Solves Corrosion Problems",
     date: "May 29, 2020",
     excerpt:
-      "A comprehensive overview of a major pipeline renewal project utilizing the IT3 multiwall system technology.",
-    href: "/articles/pipeline-renewal-25-mile",
+      "Con Ed recently replaced two corroded fuel oil pipelines in Manhattan using a new multiwall piping system.",
+    href: "/articles/multiwall-piping-corrosion-solutions",
   },
   {
     title: "Multiwall System Curbs Sour Gas Corrosion",
