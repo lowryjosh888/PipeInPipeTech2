@@ -188,7 +188,7 @@ export default function MultiWallSourGasCorrosion() {
             <figure className="my-8 flex flex-col items-center">
               <div className="max-w-2xl w-full rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/images/sour-gas-fig1.png"
+                  src="/images/sour-gas-fig1.jpg"
                   alt="Fig. 1 — Wall crushing action on plastic liner"
                   className="w-full h-auto"
                 />
@@ -252,7 +252,7 @@ export default function MultiWallSourGasCorrosion() {
             <figure className="my-8 flex flex-col items-center">
               <div className="max-w-2xl w-full rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/images/sour-gas-fig3.png"
+                  src="/images/sour-gas-fig3.jpg"
                   alt="Fig. 3 — Pipe line profile and layout"
                   className="w-full h-auto"
                 />
@@ -274,7 +274,7 @@ export default function MultiWallSourGasCorrosion() {
             <figure className="my-8 flex flex-col items-center">
               <div className="max-w-2xl w-full rounded-lg overflow-hidden shadow-md">
                 <img
-                  src="/images/sour-gas-fig5.png"
+                  src="/images/sour-gas-fig5.jpg"
                   alt="Fig. 5 — Positions that liner assumes after insertion and during cementing process"
                   className="w-full h-auto"
                 />
