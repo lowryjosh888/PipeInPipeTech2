@@ -31,11 +31,11 @@ const articles = [
     href: "/articles/multiwall-subsea-repair",
   },
   {
-    title: "Advanced Pipeline Rehabilitation Techniques",
+    title: "Con Edison Lines Replaced by New Multiwall Piping System",
     date: "May 29, 2020",
     excerpt:
-      "Exploring innovative approaches to in-situ pipeline rehabilitation using multiwall containment systems.",
-    href: "/articles/rehabilitation-techniques",
+      "Consolidated Edison Company of New York recently replaced two corroded fuel oil pipelines using a new multiwall piping system.",
+    href: "/articles/con-edison-multiwall-replacement",
   },
 ]
 
