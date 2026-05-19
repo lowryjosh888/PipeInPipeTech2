@@ -1,4 +1,4 @@
-import Link from "next/link"
+﻿import Link from "next/link"
 import { ArrowLeft, Phone, Mail, MapPin } from "lucide-react"
 
 export default function MultiwallPipingCorrosionSolutions() {
@@ -170,35 +170,6 @@ export default function MultiwallPipingCorrosionSolutions() {
               thermal expansion factors. Empirical testing results have indicated no degradation or detrimental effects
               to the system.
             </p>
-
-            {/* Share */}
-            <div className="border-t border-gray-200 mt-10 pt-6 flex items-center gap-4">
-              <span className="text-sm text-gray-500 font-medium">Share this post:</span>
-              <a
-                href="https://www.facebook.com/sharer/sharer.php?u=https://www.pipeinpipetech.com/articles/multiwall-piping-corrosion-solutions"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Share on Facebook"
-                className="w-9 h-9 rounded-full flex items-center justify-center transition-opacity hover:opacity-80"
-                style={{ background: "#1877f2" }}
-              >
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988H7.898V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V21.88C18.343 21.128 22 16.991 22 12z" />
-                </svg>
-              </a>
-              <a
-                href="https://twitter.com/intent/tweet?url=https://www.pipeinpipetech.com/articles/multiwall-piping-corrosion-solutions&text=Multiwall+Piping+Solves+Corrosion+Problems"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Share on Twitter"
-                className="w-9 h-9 rounded-full flex items-center justify-center transition-opacity hover:opacity-80"
-                style={{ background: "#000000" }}
-              >
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-            </div>
 
           </div>
         </div>

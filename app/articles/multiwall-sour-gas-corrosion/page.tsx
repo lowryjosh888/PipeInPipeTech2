@@ -1,4 +1,4 @@
-import Link from "next/link"
+﻿import Link from "next/link"
 import { ArrowLeft, Phone, Mail, MapPin } from "lucide-react"
 
 export default function MultiWallSourGasCorrosion() {
