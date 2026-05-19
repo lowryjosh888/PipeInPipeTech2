@@ -169,6 +169,17 @@ export default function MultiWallSourGasCorrosion() {
               <span className="font-bold">Design for gas systems</span>. A gas system involves an additional design
               constraint over and above that common to all systems: that of external collapse of the inner plastic.
             </p>
+            {/* Fig. 1 */}
+            <figure className="my-8 flex flex-col items-center">
+              <div className="max-w-2xl w-full rounded-lg overflow-hidden shadow-md">
+                <img
+                  src="/images/sour-gas-fig1.jpg"
+                  alt="Fig. 1 — Wall crushing action on plastic liner"
+                  className="w-full h-auto"
+                />
+              </div>
+            </figure>
+
             <p className="text-gray-700 mb-4">
               In any system that places a non-metallic material inside a metallic one, the difference in gas
               permeability rates between the two basic material types leads to gas entrapment at the interface. This
@@ -183,17 +194,6 @@ export default function MultiWallSourGasCorrosion() {
               transfers to what has been called a wall crushing action which requires a considerably higher pressure than
               what is normally expected of plastic pipe. (Fig. 1)
             </p>
-
-            {/* Fig. 1 */}
-            <figure className="my-8 flex flex-col items-center">
-              <div className="max-w-2xl w-full rounded-lg overflow-hidden shadow-md">
-                <img
-                  src="/images/sour-gas-fig1.jpg"
-                  alt="Fig. 1 — Wall crushing action on plastic liner"
-                  className="w-full h-auto"
-                />
-              </div>
-            </figure>
 
             <p className="text-gray-700 mb-8">
               The calculation method utilizes the familiar Barlow equation, but with the application of compressive
@@ -237,14 +237,6 @@ export default function MultiWallSourGasCorrosion() {
               <span className="font-bold">Installation</span>. It was decided in 1974 to install the RTR lined steel
               concept in a critical 1.1-mile portion of the Hunter Valley pipeline as a repair system.
             </p>
-            <p className="text-gray-700 mb-4">
-              The liner segments, each approximately 40 feet long, were joined with a butt and strap overwrap procedure
-              on the surface to form a continuous liner string. Once joined, the liner was pulled through the existing
-              steel casing using a winch system. Cement grout was then injected under pressure through ports welded into
-              the steel casing to fill the annular space completely, and air escape vents allowed the annulus to be
-              fully grouted without air pockets. (Fig. 3)
-            </p>
-
             {/* Fig. 3 */}
             <figure className="my-8 flex flex-col items-center">
               <div className="max-w-2xl w-full rounded-lg overflow-hidden shadow-md">
@@ -257,11 +249,31 @@ export default function MultiWallSourGasCorrosion() {
             </figure>
 
             <p className="text-gray-700 mb-4">
-              The liner was fabricated from standard 6-inch RTR pipe with a wall thickness designed to withstand the
-              anticipated external collapse load during the cementing process. Because of the significant elevation
-              differences in the Hunter Valley terrain, the hydrostatic head of the cement slurry was a critical design
-              parameter. The RTR pipe, with its high hoop strength-to-weight ratio, proved to be the ideal material for
-              this application. The liner weighs approximately .80 lb./ft.
+              A nominal 4-inch RTR pipe was chosen which had a rating of 300 psi in a free-standing system. It was
+              constructed with anhydride-cured bisphenol A epoxy resin reinforced with continuous winding of glass
+              strands and a plasticized inner resin-rich layer.
+            </p>
+            <p className="text-gray-700 mb-4">
+              Unisert Systems installed the RTR lined steel pipe in the summer of 1975. The RTR pipe was completely
+              joined on surface and pressure tested to 500 psi. It was then winched into the existing steel case with a
+              steel cable as is common in a slip-lining technique. The annular space was then packed off at the ends to
+              provide a defined volume. The cementing ports, 500 to 1,000 feet apart, were situated to act as air
+              escape vents. (Fig. 3) The grout was pumped from one port to next port in succession. The final system
+              was then pressure tested at 2,200 psi.
+            </p>
+            <p className="text-gray-700 mb-4">
+              The success of the cementing process is attributed to the rising action of the liner during grout
+              injection. This eliminates any stagnant areas in the annular space and ensures a complete fill with solid
+              material.
+            </p>
+            <p className="text-gray-700 mb-4">
+              The plastic pipe positions itself in the following manner after being inserted into the existing metal
+              carrier pipe: Figure 5A — after pulling, the plastic may be positioned eccentrically within the outer
+              pipe, particularly around side bends. Figure 5B — the plastic pipe is filled with water, the weight of
+              which relaxes any slight residual tension from the pull and forces the inner pipe to be cradled at the
+              bottom of the outer pipe as in two concentric circles. The pipe is internally pressured at this time to
+              prevent its collapse during the cement process. In the case of the 4-inch nominal diameter RTR, the pipe
+              itself weighs approximately .80 lb./ft.
             </p>
 
             {/* Fig. 5 */}
@@ -275,20 +287,88 @@ export default function MultiWallSourGasCorrosion() {
               </div>
             </figure>
 
+            <p className="text-gray-700 mb-4">
+              Figure 5C — the grout initially starts flowing in the upper zone between plastic pipe and metal pipe.
+            </p>
+            <p className="text-gray-700 mb-8">
+              Figure 5D — the buoyancy action from the plastic pipe encased in fluid cement (5.5 lb./ft. for 4&quot;)
+              forces the pipe to rise, thereby eliminating any stagnant areas at the bottom of the pipe circumference.
+            </p>
+
             {/* ── Results ── */}
             <p className="text-gray-700 mb-4">
-              <span className="font-bold">Results</span>. The Hunter Valley pipeline was successfully rehabilitated and
-              returned to service in 1975. Over the ensuing six-year period the line has operated without a single leak
-              attributable to the IT3 multiwall system. The operating conditions — 14% H2S, 5% CO2, elevated
-              temperature, and cyclic pressure — represent one of the most corrosive environments to which such a system
-              has been subjected.
+              <span className="font-bold">Results</span>. A leak-free record in the last six years verifies the success
+              of the project. To date, the RTR lined system has outlasted the longest previous run life by a factor of
+              six while allowing uninterrupted production of the well. The aggressiveness of the fluid stream has not
+              decreased over time as borne out by further corrosion studies.
+            </p>
+            <p className="text-gray-700 mb-4">
+              Pressure gages had been placed at the cementing ports to monitor the annular pressure. It has been found
+              that the annular pressure is generally 200 psi lower than the system pressure while in operation. They
+              also indicate that the RTR liner had been subject to microcracking, likely from two factors: first, the
+              freestanding liner was internally over-pressured during the cementing operation due to incorrect design
+              specification; second, carbon disulfide solvent known to be very aggressive to the epoxy resin had been
+              inadvertently pumped through the line following well stimulation, this practice being subsequently
+              discontinued.
+            </p>
+            <p className="text-gray-700 mb-4">
+              A TV camera inspection survey performed by Shell Canada in 1980 showed that the inner resin-rich layer of
+              the RTR pipe had deteriorated at localized areas, but also showed that the RTR tube had not collapsed in
+              any section from line depressure. Radiographic and ultrasonic inspection of the steel outer case at those
+              areas that the TV survey indicated liner deterioration has shown no metal loss. The cementing ports have
+              also been monitored by gas detectors to determine the amount of H2S flowing through the annular space and
+              to date, not even trace amounts have been detected.
+            </p>
+
+            {/* ── Subsequent Developments ── */}
+            <p className="text-gray-700 mb-4">
+              <span className="font-bold">Subsequent developments</span>. Since that first RTR lined steel installation
+              in 1975, several improvements on the design and installation practice have been instituted:
+            </p>
+            <p className="text-gray-700 mb-4">
+              <span className="font-bold">Materials selection</span>. Various RTR products presently show marked
+              differences in flexibility and corrosion resistance, a direct function of the materials and procedures
+              used in the manufacturing process.
+            </p>
+            <p className="text-gray-700 mb-4">
+              In the same nominal diameter size, some, for example, show twice the flexibility in bending radius than
+              others. Recent studies in CO2 systems have also proven that while some RTR products blister and fail
+              within short periods of time in this environment, others are resistant even at higher temperatures. The
+              inner plastic liner must therefore be carefully chosen to match the design parameters.
+            </p>
+            <p className="text-gray-700 mb-4">
+              <span className="font-bold">Joining techniques</span>. The tapered bell and spigot RTR joint has been
+              verified as a sound integral connection.
+            </p>
+            <p className="text-gray-700 mb-4">
+              Upon the application of epoxy to the tapered surfaces, the spigot end can hydraulic out of the bell end.
+              Therefore, hydraulic come-alongs, which force the adjoining tapers together to a specified pressure, have
+              been used to produce high quality joints. This procedure has been used by Unisert Systems up to diameters
+              of 18 inches.
+            </p>
+            <p className="text-gray-700 mb-4">
+              In terms of the final IT3 Multi-layer connections, joints have been eliminated even between the one-half
+              to 1-mile segments with an overwrapped steel sleeve as illustrated in Fig. 6. These have been
+              successfully installed in gas systems containing up to 26 percent H2S. Hence, cross-country pipelining
+              without interruption of the RTR liner has been made possible.
+            </p>
+            <p className="text-gray-700 mb-4">
+              <span className="font-bold">Quality Control</span>. For repair applications of existing systems, an
+              elongated steel barrel to specified dimensions is initially pumped through the line to verify that the
+              liner can be slipped in without exceeding its bending radius.
             </p>
             <p className="text-gray-700 mb-6">
-              The six-year leak-free record provides compelling evidence that the compressed liner concept, with RTR as
-              the liner material and Portland cement grout as the annular material, represents a viable and durable
-              solution for in-situ rehabilitation of sour gas pipelines. The cost of the repair was approximately 60
-              percent of the cost of replacement with a new coated steel pipeline, and the installation was completed
-              without major disruption to the surrounding environment.
+              The plastic liner is generally subject to a three-step hydrostatic pressure test, on surface, after
+              insertion and within the final system. Batch mixing of the grout has always been viewed as essential to
+              the process to eliminate any variations in the properties from that tested. The grout flow cone test is
+              correlated with more sensitive laboratory measurements of viscosity to provide a method of checking the
+              grout properties under field conditions.
+            </p>
+            <p className="text-gray-700 mb-6">
+              The acoustic cement bond log has also been tested as a method to verify that the annular space is
+              completely filled with solid material. Electromagnetic techniques have been applied to locate any
+              microcracked areas in specifically the RTR liner. The combination of all these methods then ensures that
+              the plastic pipe is constructed as a sealed unit within Unisert&apos;s IT3 plastic-lined steel system.
             </p>
 
 
